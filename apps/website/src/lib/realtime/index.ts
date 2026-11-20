@@ -1,5 +1,4 @@
-// Public realtime API surface for routes/components.
-// Re-exporting from one file keeps imports stable when internals are reorganized.
+export { applyMessageToSharedState } from './bus-reducer';
 export { controlEngine } from './engines/control-engine';
 export { screenEngine } from './engines/screen-engine';
 export { controlStore } from './stores/control-store';
@@ -7,11 +6,18 @@ export { screenStore } from './stores/screen-store';
 export type {
     BusMessage,
     BusSharedState,
+    CorridorFilter,
     EngineConnectionState,
     EngineRole,
     EngineStoreState,
     HelloBusMessage,
-    MapCity,
+    HexLayerMode,
+    HubPresetId,
+    NarrativeAct,
+    ScreenAnalysisParamsMessage,
     ScreenMapViewMessage,
-    ScreenSegmentSelectionMessage
+    WalkingDataset,
+    WalkingLink,
+    WalkingStation
 } from './types';
+export { DEFAULT_BUS_SHARED_STATE } from './types';

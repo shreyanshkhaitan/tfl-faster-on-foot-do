@@ -1,44 +1,35 @@
 import { createFileRoute } from '@tanstack/react-router';
 import { defineHooks } from 'crossws';
 
-import type {
-    BusMessage,
-    BusSharedState,
-    ScreenMapViewMessage,
-    ScreenSegmentSelectionMessage
+import {
+    applyMessageToSharedState,
+    type BusMessage,
+    type BusSharedState,
+    DEFAULT_BUS_SHARED_STATE
 } from '../lib/realtime';
-import { isMapCity } from '../lib/realtime/map-cities';
 
-// In-memory bus state for this server process.
-// New clients receive this snapshot in the `hello` handshake so they can
-// join late without waiting for another control interaction.
-const busSharedState: BusSharedState = {
-    city: 'london',
-    zoom: 9,
-    selectedSegmentIndexes: []
-};
+// Canonical in-memory collaborative state replayed via `hello` to late-joining nodes.
+let busSharedState: BusSharedState = { ...DEFAULT_BUS_SHARED_STATE };
 
 const hooks = defineHooks({
     open(peer) {
-        // `hello` is our bootstrap packet:
-        // it communicates peer identity + current collaborative state.
+        peer.subscribe('do');
+        const activePeers = peer.peers.size;
+
         peer.send({
             type: 'hello',
             peerId: peer.id,
+            peerCount: activePeers,
             state: busSharedState
         });
 
-        // All collaborating clients publish/subscribe on one logical channel (`do`).
-        // This keeps the demo simple while still showing fan-out semantics.
-        peer.subscribe('do');
         peer.publish('do', {
             type: 'peer',
             peerId: peer.id,
-            peerCount: peer.peers.size
+            peerCount: activePeers
         });
     },
     message(peer, message) {
-        // Ignore malformed payloads; only valid JSON objects enter the shared-state path.
         let payload: Partial<BusMessage>;
         try {
             const parsed = message.json() as unknown;
@@ -47,9 +38,9 @@ const hooks = defineHooks({
         } catch {
             return;
         }
-        updateBusSharedState(payload);
 
-        // Broadcast to all peers. Each client engine can ignore own echoes via peerId.
+        busSharedState = applyMessageToSharedState(busSharedState, payload);
+
         peer.publish('do', {
             ...payload,
             peerId: peer.id,
@@ -57,46 +48,19 @@ const hooks = defineHooks({
         });
     },
     close(peer) {
+        peer.unsubscribe('do');
         peer.publish('do', {
             type: 'bye',
             peerId: peer.id,
             peerCount: peer.peers.size
         });
-        peer.unsubscribe('do');
     }
 });
-
-function updateBusSharedState(payload: Partial<BusMessage>) {
-    if (payload.type === 'screen/map-view') {
-        const message = payload as Partial<ScreenMapViewMessage>;
-        // Preserve last known valid city/zoom for hello-state replay.
-        if (isMapCity(message.city)) {
-            busSharedState.city = message.city;
-        }
-
-        if (typeof message.view?.zoom === 'number') {
-            busSharedState.zoom = message.view.zoom;
-        }
-        return;
-    }
-
-    if (payload.type === 'screen/segment-selection') {
-        const message = payload as Partial<ScreenSegmentSelectionMessage>;
-        if (!Array.isArray(message.indexes)) return;
-
-        // Keep indexes deterministic for easier equality checks in clients and debugging.
-        busSharedState.selectedSegmentIndexes = message.indexes
-            .filter((value): value is number => Number.isInteger(value) && value >= 0)
-            .slice()
-            .sort((a, b) => a - b);
-    }
-}
 
 export const Route = createFileRoute('/bus')({
     server: {
         handlers: {
             GET: async () => {
-                // HTTP fallback response: this endpoint is a websocket upgrade target.
                 return Object.assign(
                     new Response('WebSocket upgrade is required.', {
                         status: 426

@@ -4,7 +4,7 @@ import type { BusMessage, EngineRole, EngineStoreState, HelloBusMessage } from '
 
 const RECONNECT_DELAY_MS = 1_500;
 
-// Shared websocket transport used by both control and screen engines.
+// Shared WebSocket transport used by both operator controls and display screens.
 export abstract class BusEngine<TStoreState extends EngineStoreState = EngineStoreState> {
     private socket: WebSocket | null = null;
     private reconnectTimer: ReturnType<typeof setTimeout> | null = null;
@@ -14,7 +14,9 @@ export abstract class BusEngine<TStoreState extends EngineStoreState = EngineSto
     protected constructor(role: EngineRole, store: Store<TStoreState>) {
         this.role = role;
         this.store = store;
-        // Engines can be imported during SSR/build, so gate browser-only APIs.
+    }
+
+    ensureConnected() {
         if (this.canUseBrowserSockets()) {
             this.connect();
         }
@@ -23,7 +25,6 @@ export abstract class BusEngine<TStoreState extends EngineStoreState = EngineSto
     private connect() {
         if (!this.canUseBrowserSockets()) return;
 
-        // Reuse an active connection when possible.
         const existing = this.socket;
         if (existing) {
             if (
@@ -42,7 +43,6 @@ export abstract class BusEngine<TStoreState extends EngineStoreState = EngineSto
             lastError: null
         }));
 
-        // Match ws/wss to current page protocol.
         const protocol = window.location.protocol === 'https:' ? 'wss' : 'ws';
         const url = `${protocol}://${window.location.host}/bus`;
         const socket = new WebSocket(url);
@@ -88,11 +88,11 @@ export abstract class BusEngine<TStoreState extends EngineStoreState = EngineSto
     }
 
     protected onMessage(_message: BusMessage) {
-        // Hook for specialized screen/control handling.
+        // Implemented by screen/control engines.
     }
 
     protected onHello(_hello: HelloBusMessage) {
-        // Hook for engine-specific initialization from hello payload.
+        // Implemented by screen/control engines.
     }
 
     protected shouldIgnoreSelfMessages() {
@@ -111,7 +111,6 @@ export abstract class BusEngine<TStoreState extends EngineStoreState = EngineSto
     }
 
     private handleSocketMessage(data: unknown, sourceSocket: WebSocket) {
-        // Accept multiple browser payload types to make transport robust across environments.
         if (typeof data === 'string') {
             this.processParsedMessage(data, sourceSocket);
             return;
@@ -144,11 +143,14 @@ export abstract class BusEngine<TStoreState extends EngineStoreState = EngineSto
         const parsed = this.parseMessage(rawMessage);
         if (!parsed) return;
 
+        const nextPeerCount =
+            typeof parsed.peerCount === 'number' && parsed.peerCount > 0 ? parsed.peerCount : null;
+
         this.store.setState((prev) => ({
             ...prev,
+            peerCount: nextPeerCount ?? prev.peerCount,
             messageCount: prev.messageCount + 1,
-            lastMessageType: parsed.type,
-            lastMessageAt: Date.now()
+            lastMessageType: parsed.type
         }));
 
         if (this.shouldFilterMessage(parsed)) return;
@@ -165,7 +167,6 @@ export abstract class BusEngine<TStoreState extends EngineStoreState = EngineSto
             return true;
         }
 
-        // Ignore own broadcast echo unless a subclass opts out.
         if (
             this.shouldIgnoreSelfMessages() &&
             typeof message.peerId === 'string' &&

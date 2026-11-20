@@ -21,17 +21,31 @@ export const Route = createRootRouteWithContext()({
                 content: 'width=device-width, initial-scale=1'
             },
             {
-                title: 'DO app'
+                title: 'Faster on Foot · Imperial Data Observatory'
             },
             {
                 name: 'description',
-                content: 'A minimal DO app starter'
+                content:
+                    'Spatial & network graph analysis of Transport for London walking vs. rail travel times for the Imperial College London Data Observatory.'
             }
         ],
         links: [
             {
                 rel: 'icon',
-                href: '/favicon.ico'
+                href: '/favicon.svg'
+            },
+            {
+                rel: 'preconnect',
+                href: 'https://fonts.googleapis.com'
+            },
+            {
+                rel: 'preconnect',
+                href: 'https://fonts.gstatic.com',
+                crossOrigin: 'anonymous'
+            },
+            {
+                rel: 'stylesheet',
+                href: 'https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap'
             },
             { rel: 'stylesheet', href: appCss }
         ]
@@ -40,7 +54,6 @@ export const Route = createRootRouteWithContext()({
 });
 
 function RootComponent() {
-    // Route outlet is wrapped by the root document shell to share theme/scripts/head.
     return (
         <RootDocument>
             <Outlet />
@@ -50,28 +63,18 @@ function RootComponent() {
 
 function RootDocument({ children }: { readonly children: React.ReactNode }) {
     return (
-        <html lang="en">
+        <html lang="en" className="dark">
             <head>
                 <HeadContent />
             </head>
             <body>
-                {/*
-                  Hydration strategy:
-                  - We set the `dark` class before React hydrates so the initial server HTML and
-                    first painted client frame use the same color theme.
-                  - Without this early script, React would hydrate into a different class state
-                    and users would see a flash of incorrect theme (FOUC).
-                  - `ScriptOnce` guarantees this bootstrap script only executes once per document,
-                    even as routes change.
-                */}
                 <ScriptOnce>
                     {`document.documentElement.classList.toggle(
               'dark',
-              localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+              localStorage.theme ? localStorage.theme === 'dark' : true
           );`}
                 </ScriptOnce>
-                {/* ThemeProvider keeps theme state in sync across routes, tabs, and iframes. */}
-                <ThemeProvider>{children}</ThemeProvider>
+                <ThemeProvider defaultTheme="dark">{children}</ThemeProvider>
                 <Scripts />
             </body>
         </html>

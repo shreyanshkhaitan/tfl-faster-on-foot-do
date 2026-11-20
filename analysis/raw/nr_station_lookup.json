@@ -1,0 +1,374 @@
+{
+    "Alexandra Palace": {
+        "name": "Alexandra Palace Rail Station",
+        "lat": 51.597924,
+        "lon": -0.120235,
+        "id": "910GALEXNDP"
+    },
+    "Barnes": {
+        "name": "Barnes Rail Station",
+        "lat": 51.467086,
+        "lon": -0.242164,
+        "id": "910GBARNES"
+    },
+    "Barnes Bridge": {
+        "name": "Barnes Bridge Rail Station",
+        "lat": 51.472009,
+        "lon": -0.25263,
+        "id": "910GBNSBDGE"
+    },
+    "Battersea Park": {
+        "name": "Battersea Park Rail Station",
+        "lat": 51.47696,
+        "lon": -0.147533,
+        "id": "910GBATRSPK"
+    },
+    "Bellingham": {
+        "name": "Bellingham Rail Station",
+        "lat": 51.432913,
+        "lon": -0.019331,
+        "id": "910GBELNGHM"
+    },
+    "Blackheath": {
+        "name": "Blackheath Rail Station",
+        "lat": 51.465796,
+        "lon": 0.008872,
+        "id": "910GBLKHTH"
+    },
+    "Bowes Park": {
+        "name": "Bowes Park Rail Station",
+        "lat": 51.607012,
+        "lon": -0.120582,
+        "id": "910GBOWESPK"
+    },
+    "Catford": {
+        "name": "Catford Rail Station",
+        "lat": 51.444407,
+        "lon": -0.026317,
+        "id": "910GCATFORD"
+    },
+    "Catford Bridge": {
+        "name": "Catford Bridge Rail Station",
+        "lat": 51.444741,
+        "lon": -0.024791,
+        "id": "910GCATFBDG"
+    },
+    "Charlton": {
+        "name": "Charlton Rail Station",
+        "lat": 51.486813,
+        "lon": 0.031258,
+        "id": "910GCRLN"
+    },
+    "Chiswick": {
+        "name": "Chiswick Park Underground Station",
+        "lat": 51.494627,
+        "lon": -0.267972,
+        "id": "940GZZLUCWP"
+    },
+    "City Thameslink": {
+        "name": "City Thameslink Rail Station",
+        "lat": 51.513936,
+        "lon": -0.10359,
+        "id": "910GCTMSLNK"
+    },
+    "Cricklewood": {
+        "name": "Cricklewood Rail Station",
+        "lat": 51.558453,
+        "lon": -0.212677,
+        "id": "910GCRKLWD"
+    },
+    "Crofton Park": {
+        "name": "Crofton Park Rail Station",
+        "lat": 51.455189,
+        "lon": -0.036503,
+        "id": "910GCFPK"
+    },
+    "Deptford": {
+        "name": "Deptford Rail Station",
+        "lat": 51.478848,
+        "lon": -0.02627,
+        "id": "910GDEPTFD"
+    },
+    "Drayton Park": {
+        "name": "Drayton Park Rail Station",
+        "lat": 51.55277,
+        "lon": -0.105509,
+        "id": "910GDRYP"
+    },
+    "Earlsfield": {
+        "name": "Earlsfield Rail Station",
+        "lat": 51.442337,
+        "lon": -0.187715,
+        "id": "910GERLFLD"
+    },
+    "East Dulwich": {
+        "name": "East Dulwich Rail Station",
+        "lat": 51.461494,
+        "lon": -0.080572,
+        "id": "910GEDULWCH"
+    },
+    "IFS Cloud Greenwich Peninsula": {
+        "name": "Greenwich Peninsula",
+        "lat": 51.499573,
+        "lon": 0.00834,
+        "id": "940GZZALGWP"
+    },
+    "IFS Cloud Royal Docks": {
+        "name": "Royal Docks",
+        "lat": 51.507732,
+        "lon": 0.017648,
+        "id": "940GZZALRDK"
+    },
+    "Essex Road": {
+        "name": "Essex Road Rail Station",
+        "lat": 51.540705,
+        "lon": -0.096276,
+        "id": "910GESSEXRD"
+    },
+    "Fenchurch Street": {
+        "name": "London Fenchurch Street Rail Station",
+        "lat": 51.511646,
+        "lon": -0.078897,
+        "id": "910GFENCHRS"
+    },
+    "Gipsy Hill": {
+        "name": "Gipsy Hill Rail Station",
+        "lat": 51.424453,
+        "lon": -0.083836,
+        "id": "910GGIPSYH"
+    },
+    "Harringay": {
+        "name": "Harringay Rail Station",
+        "lat": 51.577358,
+        "lon": -0.105136,
+        "id": "910GHRGY"
+    },
+    "Haydons Road": {
+        "name": "Haydons Road Rail Station",
+        "lat": 51.425448,
+        "lon": -0.188815,
+        "id": "910GHYDNSRD"
+    },
+    "Herne Hill": {
+        "name": "Herne Hill Rail Station",
+        "lat": 51.453305,
+        "lon": -0.102289,
+        "id": "910GHERNEH"
+    },
+    "Hither Green": {
+        "name": "Hither Green Rail Station",
+        "lat": 51.452025,
+        "lon": -0.000944,
+        "id": "910GHTHRGRN"
+    },
+    "Hornsey": {
+        "name": "Hornsey Rail Station",
+        "lat": 51.586461,
+        "lon": -0.111975,
+        "id": "910GHRNSY"
+    },
+    "Kensington Olympia": {
+        "name": "Kensington (Olympia)",
+        "lat": 51.496156,
+        "lon": -0.210502,
+        "id": "HUBKPA"
+    },
+    "Kew Bridge": {
+        "name": "Kew Bridge Rail Station",
+        "lat": 51.489513,
+        "lon": -0.287108,
+        "id": "910GKEWBDGE"
+    },
+    "Kidbrooke": {
+        "name": "Kidbrooke Rail Station",
+        "lat": 51.462121,
+        "lon": 0.027498,
+        "id": "910GKIDBROK"
+    },
+    "Ladywell": {
+        "name": "Ladywell Rail Station",
+        "lat": 51.456244,
+        "lon": -0.019041,
+        "id": "910GLDYW"
+    },
+    "Lea Bridge": {
+        "name": "Lea Bridge Rail Station",
+        "lat": 51.566548,
+        "lon": -0.036673,
+        "id": "910GLEABDGE"
+    },
+    "Lee": {
+        "name": "Mile End Underground Station",
+        "lat": 51.525122,
+        "lon": -0.03364,
+        "id": "940GZZLUMED"
+    },
+    "Loughborough Junction": {
+        "name": "Loughborough Junction Rail Station",
+        "lat": 51.466298,
+        "lon": -0.102182,
+        "id": "910GLBGHJN"
+    },
+    "Maze Hill": {
+        "name": "Maze Hill Rail Station",
+        "lat": 51.482625,
+        "lon": 0.002914,
+        "id": "910GMAZEH"
+    },
+    "Mitcham Eastfields": {
+        "name": "Mitcham Eastfields Rail Station",
+        "lat": 51.407739,
+        "lon": -0.154646,
+        "id": "910GESTFLDS"
+    },
+    "Mortlake": {
+        "name": "Mortlake Rail Station",
+        "lat": 51.468087,
+        "lon": -0.267106,
+        "id": "910GMRTLKE"
+    },
+    "Norbury": {
+        "name": "Norbury Rail Station",
+        "lat": 51.411446,
+        "lon": -0.121926,
+        "id": "910GNORBURY"
+    },
+    "North Dulwich": {
+        "name": "North Dulwich Rail Station",
+        "lat": 51.45451,
+        "lon": -0.087917,
+        "id": "910GNDULWCH"
+    },
+    "North Sheen": {
+        "name": "North Sheen Rail Station",
+        "lat": 51.465155,
+        "lon": -0.287876,
+        "id": "910GNSHEEN"
+    },
+    "Northumberland Park": {
+        "name": "Northumberland Park Rail Station",
+        "lat": 51.601969,
+        "lon": -0.053932,
+        "id": "910GNMBRLPK"
+    },
+    "Nunhead": {
+        "name": "Nunhead Rail Station",
+        "lat": 51.466828,
+        "lon": -0.052273,
+        "id": "910GNUNHEAD"
+    },
+    "Putney": {
+        "name": "Putney Bridge Underground Station",
+        "lat": 51.468262,
+        "lon": -0.208731,
+        "id": "940GZZLUPYB"
+    },
+    "Queenstown Road": {
+        "name": "Queenstown Road (Battersea) Rail Station",
+        "lat": 51.474968,
+        "lon": -0.146678,
+        "id": "910GQTRDBAT"
+    },
+    "South Bermondsey": {
+        "name": "South Bermondsey Rail Station",
+        "lat": 51.488136,
+        "lon": -0.054678,
+        "id": "910GSBRMNDS"
+    },
+    "St Johns": {
+        "name": "St. John's Wood Underground Station",
+        "lat": 51.534521,
+        "lon": -0.173948,
+        "id": "940GZZLUSJW"
+    },
+    "St Pancras International": {
+        "name": "King's Cross & St Pancras International",
+        "lat": 51.531683,
+        "lon": -0.123538,
+        "id": "HUBKGX"
+    },
+    "Streatham": {
+        "name": "Streatham Hill Rail Station",
+        "lat": 51.438193,
+        "lon": -0.12716,
+        "id": "910GSTRHILL"
+    },
+    "Streatham Common": {
+        "name": "Streatham Common Rail Station",
+        "lat": 51.41873,
+        "lon": -0.13601,
+        "id": "910GSTRHCOM"
+    },
+    "Streatham Hill": {
+        "name": "Streatham Hill Rail Station",
+        "lat": 51.438193,
+        "lon": -0.12716,
+        "id": "910GSTRHILL"
+    },
+    "Sydenham Hill": {
+        "name": "Sydenham Hill Rail Station",
+        "lat": 51.432714,
+        "lon": -0.080339,
+        "id": "910GSYDNHMH"
+    },
+    "Tooting": {
+        "name": "Upper Tooting Park",
+        "lat": 51.43869,
+        "lon": -0.15661,
+        "id": "490G00013949"
+    },
+    "Tulse Hill": {
+        "name": "Upper Tulse Hill",
+        "lat": 51.44533,
+        "lon": -0.11203,
+        "id": "490G00013950"
+    },
+    "Wandsworth Common": {
+        "name": "Wandsworth Common Rail Station",
+        "lat": 51.446185,
+        "lon": -0.163386,
+        "id": "910GWANDCMN"
+    },
+    "Wandsworth Town": {
+        "name": "Wandsworth Town Station",
+        "lat": 51.46109,
+        "lon": -0.18755,
+        "id": "490001311E"
+    },
+    "Waterloo East": {
+        "name": "London Waterloo East Rail Station",
+        "lat": 51.504076,
+        "lon": -0.108898,
+        "id": "910GWLOE"
+    },
+    "West Dulwich": {
+        "name": "West Dulwich Station",
+        "lat": 51.44157,
+        "lon": -0.09309,
+        "id": "490013657S"
+    },
+    "West Norwood": {
+        "name": "West Norwood Station",
+        "lat": 51.43236,
+        "lon": -0.10398,
+        "id": "490001331W"
+    },
+    "Westcombe Park": {
+        "name": "Westcombe Park Rail Station",
+        "lat": 51.484203,
+        "lon": 0.018395,
+        "id": "910GWCOMBEP"
+    },
+    "Wimbledon Chase": {
+        "name": "Wimbledon Chase Station",
+        "lat": 51.40963,
+        "lon": -0.21291,
+        "id": "490001339A"
+    },
+    "Woolwich Dockyard": {
+        "name": "Woolwich Dockyard Station",
+        "lat": 51.49116,
+        "lon": 0.05254,
+        "id": "490001345A"
+    }
+}

@@ -1,38 +1,56 @@
 import { throttle } from '@tanstack/pacer';
 
-import { loadArcSegmentsDataset } from '../arc-segments';
-import { getCityMapView, isMapCity } from '../map-cities';
+import {
+    clampWalkMinutes,
+    clampZoom,
+    getHubMapView,
+    isCorridorFilter,
+    isHexLayerMode,
+    isHubPresetId,
+    isNarrativeAct,
+    NARRATIVE_ACTS,
+    SLIDER_MAX,
+    SLIDER_MIN,
+    sliderFromZoom,
+    zoomFromSlider
+} from '../hub-presets';
 import { controlStore } from '../stores/control-store';
 import type {
     BusMessage,
-    ControlSliderMessage,
     ControlStoreState,
+    ControlWalkSliderMessage,
+    ControlZoomSliderMessage,
+    CorridorFilter,
     HelloBusMessage,
-    MapCity,
-    ScreenMapViewMessage,
-    ScreenSegmentSelectionMessage
+    HexLayerMode,
+    HubPresetId,
+    NarrativeAct,
+    ScreenAnalysisParamsMessage,
+    ScreenMapViewMessage
 } from '../types';
+import { loadWalkingDataset } from '../walking-dataset';
 import { BusEngine } from './bus-engine';
 
-const SLIDER_BROADCAST_WAIT_MS = 100;
-const SLIDER_MIN = 0;
-const SLIDER_MAX = 100;
-const MAP_ZOOM_MIN = 6;
-const MAP_ZOOM_MAX = 18;
-const DEFAULT_SHUFFLE_SELECTION_COUNT = 24;
+const SLIDER_BROADCAST_WAIT_MS = 90;
 
 export class ControlEngine extends BusEngine<ControlStoreState> {
-    // Cached once loaded to avoid repeated dataset fetches from the control route.
-    private segmentCount: number | null = null;
+    private hasRequestedDataset = false;
+    private panLonOffset = 0;
+    private panLatOffset = 0;
 
-    // Slider moves can emit many events per second; throttle keeps interaction smooth locally
-    // while reducing websocket chatter for all connected peers.
-    private readonly broadcastSliderValueThrottled = throttle(
-        (value: number) => {
+    private readonly broadcastZoomThrottled = throttle(
+        (sliderVal: number, zoom: number) => {
+            const peerId = this.getPeerId() ?? undefined;
             this.send({
-                type: 'control/slider',
-                value,
-                peerId: this.getPeerId() ?? undefined
+                type: 'control/zoom-slider',
+                value: sliderVal,
+                peerId
+            });
+            this.send({
+                type: 'screen/map-view',
+                hub: this.store.state.selectedHub,
+                view: { zoom },
+                peerId
             });
         },
         {
@@ -42,13 +60,18 @@ export class ControlEngine extends BusEngine<ControlStoreState> {
         }
     );
 
-    private readonly broadcastMapZoomThrottled = throttle(
-        (zoom: number) => {
+    private readonly broadcastWalkMinutesThrottled = throttle(
+        (minutes: number) => {
+            const peerId = this.getPeerId() ?? undefined;
             this.send({
-                type: 'screen/map-view',
-                city: this.store.state.selectedCity,
-                view: { zoom },
-                peerId: this.getPeerId() ?? undefined
+                type: 'control/walk-slider',
+                value: minutes,
+                peerId
+            });
+            this.send({
+                type: 'screen/analysis-params',
+                maxWalkMinutes: minutes,
+                peerId
             });
         },
         {
@@ -62,148 +85,253 @@ export class ControlEngine extends BusEngine<ControlStoreState> {
         super('control', controlStore);
     }
 
+    bootstrapClient() {
+        this.ensureConnected();
+        void this.ensureDatasetLoaded();
+    }
+
     static getInstance() {
-        const globalWithControlEngine = globalThis as typeof globalThis & {
+        const globalObj = globalThis as typeof globalThis & {
             __controlEngineInstance?: ControlEngine;
         };
-
-        if (!globalWithControlEngine.__controlEngineInstance) {
-            globalWithControlEngine.__controlEngineInstance = new ControlEngine();
+        if (!globalObj.__controlEngineInstance) {
+            globalObj.__controlEngineInstance = new ControlEngine();
         }
-
-        return globalWithControlEngine.__controlEngineInstance;
+        return globalObj.__controlEngineInstance;
     }
 
-    setSliderInteracting(isSliderInteracting: boolean) {
-        // Stored so remote updates can be ignored while local user is dragging.
-        this.store.setState((prev) => {
-            if (prev.isSliderInteracting === isSliderInteracting) return prev;
-            return {
-                ...prev,
-                isSliderInteracting
-            };
-        });
+    async ensureDatasetLoaded() {
+        if (typeof window === 'undefined') return;
+        if (this.hasRequestedDataset || this.store.state.dataset) return;
+        this.hasRequestedDataset = true;
+        const dataset = await loadWalkingDataset();
+        if (!dataset) {
+            this.hasRequestedDataset = false;
+            return;
+        }
+        this.store.setState((prev) => ({
+            ...prev,
+            dataset
+        }));
     }
 
-    setSliderValue(value: number) {
-        const clampedValue = this.clampSliderValue(value);
+    selectAct(act: NarrativeAct) {
+        const preset = NARRATIVE_ACTS[act].preset;
+        const sliderVal = sliderFromZoom(preset.zoom);
+        this.panLonOffset = 0;
+        this.panLatOffset = 0;
 
-        this.store.setState((prev) => {
-            if (prev.sliderValue === clampedValue) return prev;
-            return {
-                ...prev,
-                sliderValue: clampedValue
-            };
-        });
+        this.store.setState((prev) => ({
+            ...prev,
+            act: preset.act,
+            selectedHub: preset.hub,
+            zoomSliderValue: sliderVal,
+            maxWalkMinutes: preset.maxWalkMinutes,
+            corridorFilter: preset.corridorFilter,
+            hexMode: preset.hexMode
+        }));
 
-        this.broadcastSliderValueThrottled(clampedValue);
-        // Slider value is the source-of-truth input for zoom UX in this demo.
-        this.broadcastMapZoomThrottled(this.zoomFromSlider(clampedValue));
-    }
-
-    selectCity(city: MapCity) {
-        let hasChanged = false;
-        this.store.setState((prev) => {
-            if (prev.selectedCity === city) return prev;
-            hasChanged = true;
-            return {
-                ...prev,
-                selectedCity: city
-            };
-        });
-
-        if (!hasChanged) return;
-
-        // Broadcast full target view when city changes so all screens jump to the same anchor.
+        const peerId = this.getPeerId() ?? undefined;
         this.send({
             type: 'screen/map-view',
-            city,
+            hub: preset.hub,
             view: {
-                ...getCityMapView(city),
-                zoom: this.zoomFromSlider(this.store.state.sliderValue)
+                ...getHubMapView(preset.hub),
+                zoom: preset.zoom
+            },
+            peerId
+        });
+        this.send({
+            type: 'screen/analysis-params',
+            act: preset.act,
+            corridorFilter: preset.corridorFilter,
+            hexMode: preset.hexMode,
+            maxWalkMinutes: preset.maxWalkMinutes,
+            peerId
+        });
+    }
+
+    selectHub(hub: HubPresetId) {
+        const targetView = getHubMapView(hub);
+        const nextSlider = sliderFromZoom(targetView.zoom);
+        this.panLonOffset = 0;
+        this.panLatOffset = 0;
+
+        this.store.setState((prev) => ({
+            ...prev,
+            selectedHub: hub,
+            zoomSliderValue: nextSlider
+        }));
+
+        this.send({
+            type: 'screen/map-view',
+            hub,
+            view: targetView,
+            peerId: this.getPeerId() ?? undefined
+        });
+    }
+
+    panWall(dirX: -1 | 0 | 1, dirY: -1 | 0 | 1) {
+        const currentZoom = zoomFromSlider(this.store.state.zoomSliderValue);
+        const base = getHubMapView(this.store.state.selectedHub);
+        // Scale geographic pan step cleanly with current zoom level
+        const scale = Math.pow(2, 13 - currentZoom);
+        this.panLonOffset = Math.max(
+            -0.22,
+            Math.min(0.22, this.panLonOffset + dirX * 0.022 * scale)
+        );
+        this.panLatOffset = Math.max(
+            -0.14,
+            Math.min(0.14, this.panLatOffset + dirY * 0.014 * scale)
+        );
+
+        this.send({
+            type: 'screen/map-view',
+            hub: this.store.state.selectedHub,
+            view: {
+                longitude: base.longitude + this.panLonOffset,
+                latitude: base.latitude + this.panLatOffset,
+                zoom: currentZoom
             },
             peerId: this.getPeerId() ?? undefined
         });
     }
 
-    async shuffleSegments() {
-        // Demo helper: choose a random subset for immediate visual feedback.
-        const segmentCount = await this.ensureSegmentCount();
-        if (segmentCount <= 0) return;
-
-        const targetCount = Math.min(DEFAULT_SHUFFLE_SELECTION_COUNT, segmentCount);
-        const indexes = this.pickRandomIndexes(segmentCount, targetCount);
-
-        this.store.setState((prev) => ({
-            ...prev,
-            selectedSegmentIndexes: indexes
-        }));
+    setCorridorFilter(corridorFilter: CorridorFilter) {
+        let changed = false;
+        this.store.setState((prev) => {
+            if (prev.corridorFilter === corridorFilter) return prev;
+            changed = true;
+            return { ...prev, corridorFilter };
+        });
+        if (!changed) return;
 
         this.send({
-            type: 'screen/segment-selection',
-            indexes,
+            type: 'screen/analysis-params',
+            corridorFilter,
             peerId: this.getPeerId() ?? undefined
         });
     }
 
+    setHexMode(hexMode: HexLayerMode) {
+        let changed = false;
+        this.store.setState((prev) => {
+            if (prev.hexMode === hexMode) return prev;
+            changed = true;
+            return { ...prev, hexMode };
+        });
+        if (!changed) return;
+
+        this.send({
+            type: 'screen/analysis-params',
+            hexMode,
+            peerId: this.getPeerId() ?? undefined
+        });
+    }
+
+    setZoomInteracting(isZoomInteracting: boolean) {
+        this.store.setState((prev) =>
+            prev.isZoomInteracting === isZoomInteracting ? prev : { ...prev, isZoomInteracting }
+        );
+    }
+
+    setZoomSliderValue(raw: number) {
+        const clamped = Math.round(Math.min(SLIDER_MAX, Math.max(SLIDER_MIN, raw)));
+        this.store.setState((prev) =>
+            prev.zoomSliderValue === clamped ? prev : { ...prev, zoomSliderValue: clamped }
+        );
+        this.broadcastZoomThrottled(clamped, zoomFromSlider(clamped));
+    }
+
+    setWalkInteracting(isWalkInteracting: boolean) {
+        this.store.setState((prev) =>
+            prev.isWalkInteracting === isWalkInteracting ? prev : { ...prev, isWalkInteracting }
+        );
+    }
+
+    setMaxWalkMinutes(raw: number) {
+        const clamped = clampWalkMinutes(raw);
+        this.store.setState((prev) =>
+            prev.maxWalkMinutes === clamped ? prev : { ...prev, maxWalkMinutes: clamped }
+        );
+        this.broadcastWalkMinutesThrottled(clamped);
+    }
+
     protected override onMessage(message: BusMessage) {
-        if (message.type === 'control/slider') {
-            const sliderMessage = message as ControlSliderMessage;
-            if (typeof sliderMessage.value !== 'number') return;
+        if (message.type === 'control/zoom-slider') {
+            const msg = message as ControlZoomSliderMessage;
+            if (typeof msg.value !== 'number') return;
             this.store.setState((prev) => {
-                // If the local user is actively dragging, ignore remote slider echoes
-                // to avoid "fighting cursors" and jitter.
-                if (prev.isSliderInteracting) return prev;
+                if (prev.isZoomInteracting) return prev;
+                const clamped = Math.round(Math.min(SLIDER_MAX, Math.max(SLIDER_MIN, msg.value)));
+                return prev.zoomSliderValue === clamped
+                    ? prev
+                    : { ...prev, zoomSliderValue: clamped };
+            });
+            return;
+        }
 
-                const clampedValue = this.clampSliderValue(sliderMessage.value);
-                if (prev.sliderValue === clampedValue) return prev;
-
-                return {
-                    ...prev,
-                    sliderValue: clampedValue
-                };
+        if (message.type === 'control/walk-slider') {
+            const msg = message as ControlWalkSliderMessage;
+            if (typeof msg.value !== 'number') return;
+            this.store.setState((prev) => {
+                if (prev.isWalkInteracting) return prev;
+                const clamped = clampWalkMinutes(msg.value);
+                return prev.maxWalkMinutes === clamped
+                    ? prev
+                    : { ...prev, maxWalkMinutes: clamped };
             });
             return;
         }
 
         if (message.type === 'screen/map-view') {
-            // Mirror incoming map events so all control clients display shared state.
-            const mapViewMessage = message as ScreenMapViewMessage;
+            const msg = message as ScreenMapViewMessage;
             this.store.setState((prev) => {
-                const nextCity = isMapCity(mapViewMessage.city)
-                    ? mapViewMessage.city
-                    : prev.selectedCity;
-                const nextSliderValue =
-                    typeof mapViewMessage.view?.zoom === 'number'
-                        ? this.sliderFromZoom(mapViewMessage.view.zoom)
-                        : prev.sliderValue;
-
-                if (prev.selectedCity === nextCity && prev.sliderValue === nextSliderValue) {
+                const nextHub = isHubPresetId(msg.hub) ? msg.hub : prev.selectedHub;
+                const nextSlider =
+                    !prev.isZoomInteracting && typeof msg.view?.zoom === 'number'
+                        ? sliderFromZoom(clampZoom(msg.view.zoom))
+                        : prev.zoomSliderValue;
+                if (prev.selectedHub === nextHub && prev.zoomSliderValue === nextSlider) {
                     return prev;
                 }
-
                 return {
                     ...prev,
-                    selectedCity: nextCity,
-                    sliderValue: nextSliderValue
+                    selectedHub: nextHub,
+                    zoomSliderValue: nextSlider
                 };
             });
             return;
         }
 
-        if (message.type === 'screen/segment-selection') {
-            const segmentSelectionMessage = message as ScreenSegmentSelectionMessage;
-            if (!Array.isArray(segmentSelectionMessage.indexes)) return;
-            const indexes = segmentSelectionMessage.indexes
-                .filter((value): value is number => Number.isInteger(value) && value >= 0)
-                .slice()
-                .sort((a, b) => a - b);
-
+        if (message.type === 'screen/analysis-params') {
+            const msg = message as ScreenAnalysisParamsMessage;
             this.store.setState((prev) => {
-                if (arraysEqual(prev.selectedSegmentIndexes, indexes)) return prev;
+                const nextAct = isNarrativeAct(msg.act) ? msg.act : prev.act;
+                const nextFilter = isCorridorFilter(msg.corridorFilter)
+                    ? msg.corridorFilter
+                    : prev.corridorFilter;
+                const nextHex = isHexLayerMode(msg.hexMode) ? msg.hexMode : prev.hexMode;
+                const nextWalk =
+                    !prev.isWalkInteracting && typeof msg.maxWalkMinutes === 'number'
+                        ? clampWalkMinutes(msg.maxWalkMinutes)
+                        : prev.maxWalkMinutes;
+
+                if (
+                    prev.act === nextAct &&
+                    prev.corridorFilter === nextFilter &&
+                    prev.hexMode === nextHex &&
+                    prev.maxWalkMinutes === nextWalk
+                ) {
+                    return prev;
+                }
+
                 return {
                     ...prev,
-                    selectedSegmentIndexes: indexes
+                    act: nextAct,
+                    corridorFilter: nextFilter,
+                    hexMode: nextHex,
+                    maxWalkMinutes: nextWalk
                 };
             });
         }
@@ -213,80 +341,18 @@ export class ControlEngine extends BusEngine<ControlStoreState> {
         const state = hello.state;
         if (!state) return;
 
-        // Rehydrate control UI from bus snapshot so newly opened tablets are immediately in sync.
-        this.store.setState((prev) => {
-            const nextCity = state.city;
-            const nextSliderValue = this.sliderFromZoom(state.zoom);
-            const nextSelectedIndexes = Array.isArray(state.selectedSegmentIndexes)
-                ? state.selectedSegmentIndexes
-                      .filter((value): value is number => Number.isInteger(value) && value >= 0)
-                      .slice()
-                      .sort((a, b) => a - b)
-                : prev.selectedSegmentIndexes;
-            if (
-                prev.selectedCity === nextCity &&
-                prev.sliderValue === nextSliderValue &&
-                arraysEqual(prev.selectedSegmentIndexes, nextSelectedIndexes)
-            ) {
-                return prev;
-            }
-            return {
-                ...prev,
-                selectedCity: nextCity,
-                sliderValue: nextSliderValue,
-                selectedSegmentIndexes: nextSelectedIndexes
-            };
-        });
-    }
-
-    private clampSliderValue(value: number) {
-        // Single clamp utility keeps incoming and outgoing slider values consistent.
-        return Math.min(SLIDER_MAX, Math.max(SLIDER_MIN, value));
-    }
-
-    private zoomFromSlider(sliderValue: number) {
-        // Linear mapping keeps control UI simple and predictable.
-        const normalized = (sliderValue - SLIDER_MIN) / (SLIDER_MAX - SLIDER_MIN);
-        return MAP_ZOOM_MIN + normalized * (MAP_ZOOM_MAX - MAP_ZOOM_MIN);
-    }
-
-    private sliderFromZoom(zoom: number) {
-        const clampedZoom = Math.min(MAP_ZOOM_MAX, Math.max(MAP_ZOOM_MIN, zoom));
-        const normalized = (clampedZoom - MAP_ZOOM_MIN) / (MAP_ZOOM_MAX - MAP_ZOOM_MIN);
-        return this.clampSliderValue(normalized * (SLIDER_MAX - SLIDER_MIN) + SLIDER_MIN);
-    }
-
-    private async ensureSegmentCount() {
-        if (this.segmentCount !== null) return this.segmentCount;
-        if (typeof window === 'undefined') return 0;
-
-        const payload = await loadArcSegmentsDataset();
-        if (!payload) {
-            // Soft-fail: control features should keep working even if optional data fetch fails.
-            return 0;
-        }
-
-        this.segmentCount = payload.length;
-        return this.segmentCount;
-    }
-
-    private pickRandomIndexes(maxExclusive: number, count: number) {
-        // Fisher-Yates shuffle for unbiased random subset.
-        const pool = Array.from({ length: maxExclusive }, (_, index) => index);
-        for (let i = pool.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [pool[i], pool[j]] = [pool[j], pool[i]];
-        }
-        return pool.slice(0, count).sort((a, b) => a - b);
+        this.store.setState((prev) => ({
+            ...prev,
+            act: isNarrativeAct(state.act) ? state.act : prev.act,
+            selectedHub: isHubPresetId(state.hub) ? state.hub : prev.selectedHub,
+            zoomSliderValue: sliderFromZoom(state.zoom),
+            maxWalkMinutes: clampWalkMinutes(state.maxWalkMinutes),
+            corridorFilter: isCorridorFilter(state.corridorFilter)
+                ? state.corridorFilter
+                : prev.corridorFilter,
+            hexMode: isHexLayerMode(state.hexMode) ? state.hexMode : prev.hexMode
+        }));
     }
 }
 
 export const controlEngine = ControlEngine.getInstance();
-
-function arraysEqual(a: number[], b: number[]) {
-    if (a.length !== b.length) return false;
-    for (let i = 0; i < a.length; i++) {
-        if (a[i] !== b[i]) return false;
-    }
-    return true;
-}

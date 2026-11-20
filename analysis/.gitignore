@@ -1,0 +1,4 @@
+.venv/
+__pycache__/
+raw/hex_extracted/
+raw/HAM_Cyn_Ped_HexData_v2.zip

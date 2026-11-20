@@ -1,193 +1,182 @@
-import { loadArcSegmentsDataset } from '../arc-segments';
-import { getCityMapView, isMapCity } from '../map-cities';
+import {
+    clampWalkMinutes,
+    clampZoom,
+    getHubMapView,
+    isCorridorFilter,
+    isHexLayerMode,
+    isHubPresetId,
+    isNarrativeAct
+} from '../hub-presets';
 import { screenStore } from '../stores/screen-store';
 import type {
-    ArcSegment,
     BusMessage,
     HelloBusMessage,
+    ScreenAnalysisParamsMessage,
     ScreenMapViewMessage,
     ScreenMapViewState,
-    ScreenSegmentSelectionMessage,
     ScreenStoreState
 } from '../types';
+import { loadWalkingDataset } from '../walking-dataset';
 import { BusEngine } from './bus-engine';
 
 export class ScreenEngine extends BusEngine<ScreenStoreState> {
-    // Guards repeated fetches during retries/rerenders.
-    private hasAttemptedArcSegmentLoad = false;
+    private hasAttemptedLoad = false;
 
     private constructor() {
         super('screen', screenStore);
-        // Prime dataset early so first render after route mount has data asap.
-        void this.ensureArcSegmentsLoaded();
+    }
+
+    bootstrapClient() {
+        this.ensureConnected();
+        void this.ensureDatasetLoaded();
     }
 
     static getInstance() {
-        const globalWithScreenEngine = globalThis as typeof globalThis & {
+        const globalObj = globalThis as typeof globalThis & {
             __screenEngineInstance?: ScreenEngine;
         };
-
-        if (!globalWithScreenEngine.__screenEngineInstance) {
-            globalWithScreenEngine.__screenEngineInstance = new ScreenEngine();
+        if (!globalObj.__screenEngineInstance) {
+            globalObj.__screenEngineInstance = new ScreenEngine();
         }
-
-        return globalWithScreenEngine.__screenEngineInstance;
+        return globalObj.__screenEngineInstance;
     }
 
-    setMapView(view: Partial<ScreenMapViewState>) {
-        // Merge patch updates so callers can provide only changed camera fields.
-        this.store.setState((prev) => ({
-            ...prev,
-            mapView: {
-                ...prev.mapView,
-                ...view
-            }
-        }));
-    }
-
-    async ensureArcSegmentsLoaded() {
+    async ensureDatasetLoaded() {
         if (typeof window === 'undefined') return;
-        if (this.hasAttemptedArcSegmentLoad || this.store.state.arcSegments.length > 0) return;
+        if (this.hasAttemptedLoad || this.store.state.dataset !== null) return;
 
-        this.hasAttemptedArcSegmentLoad = true;
+        this.hasAttemptedLoad = true;
         this.store.setState((prev) => ({
             ...prev,
-            isArcSegmentsLoading: true
+            isDatasetLoading: true
         }));
 
-        try {
-            const payload = await loadArcSegmentsDataset();
-            if (!payload) {
-                throw new Error('Failed to load arc segments');
-            }
-            const arcSegments = this.parseArcSegments(payload);
-
+        const dataset = await loadWalkingDataset();
+        if (!dataset) {
+            this.hasAttemptedLoad = false;
             this.store.setState((prev) => ({
                 ...prev,
-                arcSegments,
-                isArcSegmentsLoading: false
+                isDatasetLoading: false
             }));
-        } catch {
-            // Reset guard so a later user action / reconnect can retry loading data.
-            this.hasAttemptedArcSegmentLoad = false;
-            this.store.setState((prev) => ({
-                ...prev,
-                isArcSegmentsLoading: false
-            }));
+            return;
         }
+
+        this.store.setState((prev) => ({
+            ...prev,
+            dataset,
+            isDatasetLoading: false
+        }));
     }
 
     protected override onMessage(message: BusMessage) {
         if (message.type === 'screen/map-view') {
-            const mapViewMessage = message as ScreenMapViewMessage;
-            this.applyMapViewMessage(mapViewMessage);
+            this.applyMapViewMessage(message as ScreenMapViewMessage);
             return;
         }
 
-        if (message.type === 'screen/segment-selection') {
-            const segmentSelectionMessage = message as ScreenSegmentSelectionMessage;
-            this.applySegmentSelection(segmentSelectionMessage.indexes);
+        if (message.type === 'screen/analysis-params') {
+            this.applyAnalysisParams(message as ScreenAnalysisParamsMessage);
         }
     }
 
     protected override onHello(hello: HelloBusMessage) {
         if (!hello.state) return;
-        // Apply the same message handlers used for live events so hello-state and realtime updates
-        // follow one code path and stay behaviorally consistent.
         this.applyMapViewMessage({
             type: 'screen/map-view',
-            city: hello.state.city,
-            view: { zoom: hello.state.zoom }
+            hub: hello.state.hub,
+            view: {
+                longitude: hello.state.longitude,
+                latitude: hello.state.latitude,
+                zoom: hello.state.zoom
+            }
         });
-        this.applySegmentSelection(hello.state.selectedSegmentIndexes);
+        this.applyAnalysisParams({
+            type: 'screen/analysis-params',
+            act: hello.state.act,
+            corridorFilter: hello.state.corridorFilter,
+            hexMode: hello.state.hexMode,
+            maxWalkMinutes: hello.state.maxWalkMinutes
+        });
     }
 
-    private applyMapViewMessage(mapViewMessage: ScreenMapViewMessage) {
-        // Start from current state and layer updates in deterministic order:
-        // city preset first, then granular overrides from `view`.
-        let nextView = this.store.state.mapView;
-
-        if (isMapCity(mapViewMessage.city)) {
-            nextView = {
-                ...nextView,
-                ...getCityMapView(mapViewMessage.city)
-            };
-        }
-
-        if (mapViewMessage.view && typeof mapViewMessage.view === 'object') {
-            const view = mapViewMessage.view;
-            nextView = {
-                ...nextView,
-                longitude: typeof view.longitude === 'number' ? view.longitude : nextView.longitude,
-                latitude: typeof view.latitude === 'number' ? view.latitude : nextView.latitude,
-                zoom: typeof view.zoom === 'number' ? view.zoom : nextView.zoom,
-                bearing: typeof view.bearing === 'number' ? view.bearing : nextView.bearing,
-                pitch: typeof view.pitch === 'number' ? view.pitch : nextView.pitch
-            };
-        }
-
-        this.setMapView(nextView);
-    }
-
-    private applySegmentSelection(indexes: unknown) {
-        if (!Array.isArray(indexes)) return;
-
-        const sanitizedIndexes = indexes
-            .filter((value): value is number => Number.isInteger(value) && value >= 0)
-            .slice()
-            .sort((a, b) => a - b);
-
+    private applyMapViewMessage(msg: ScreenMapViewMessage) {
         this.store.setState((prev) => {
-            if (arraysEqual(prev.selectedSegmentIndexes, sanitizedIndexes)) return prev;
-            return {
-                ...prev,
-                selectedSegmentIndexes: sanitizedIndexes
-            };
-        });
-    }
+            let nextView: ScreenMapViewState = prev.mapView;
+            let nextHub = prev.selectedHub;
 
-    private parseArcSegments(payload: unknown): ArcSegment[] {
-        // Runtime validation keeps map rendering resilient against malformed datasets.
-        if (!Array.isArray(payload)) return [];
-
-        const segments: ArcSegment[] = [];
-        for (const item of payload) {
-            if (typeof item !== 'object' || item === null) continue;
-            const candidate = item as Partial<ArcSegment>;
-            if (
-                typeof candidate.id !== 'string' ||
-                !Array.isArray(candidate.start) ||
-                !Array.isArray(candidate.end) ||
-                candidate.start.length !== 2 ||
-                candidate.end.length !== 2 ||
-                typeof candidate.start[0] !== 'number' ||
-                typeof candidate.start[1] !== 'number' ||
-                typeof candidate.end[0] !== 'number' ||
-                typeof candidate.end[1] !== 'number' ||
-                typeof candidate.weight !== 'number'
-            ) {
-                continue;
+            if (isHubPresetId(msg.hub)) {
+                nextHub = msg.hub;
+                nextView = {
+                    ...nextView,
+                    ...getHubMapView(msg.hub)
+                };
             }
 
-            segments.push({
-                id: candidate.id,
-                // Copy values into fresh tuples to avoid retaining untrusted references.
-                start: [candidate.start[0], candidate.start[1]],
-                end: [candidate.end[0], candidate.end[1]],
-                weight: candidate.weight
-            });
-        }
+            if (msg.view && typeof msg.view === 'object') {
+                const v = msg.view;
+                nextView = {
+                    ...nextView,
+                    longitude:
+                        typeof v.longitude === 'number' && Number.isFinite(v.longitude)
+                            ? v.longitude
+                            : nextView.longitude,
+                    latitude:
+                        typeof v.latitude === 'number' && Number.isFinite(v.latitude)
+                            ? v.latitude
+                            : nextView.latitude,
+                    zoom:
+                        typeof v.zoom === 'number' && Number.isFinite(v.zoom)
+                            ? clampZoom(v.zoom)
+                            : nextView.zoom,
+                    bearing:
+                        typeof v.bearing === 'number' && Number.isFinite(v.bearing)
+                            ? v.bearing
+                            : nextView.bearing,
+                    pitch:
+                        typeof v.pitch === 'number' && Number.isFinite(v.pitch)
+                            ? v.pitch
+                            : nextView.pitch
+                };
+            }
 
-        return segments;
+            return {
+                ...prev,
+                selectedHub: nextHub,
+                mapView: nextView
+            };
+        });
+    }
+
+    private applyAnalysisParams(msg: ScreenAnalysisParamsMessage) {
+        this.store.setState((prev) => {
+            const nextAct = isNarrativeAct(msg.act) ? msg.act : prev.act;
+            const nextFilter = isCorridorFilter(msg.corridorFilter)
+                ? msg.corridorFilter
+                : prev.corridorFilter;
+            const nextHex = isHexLayerMode(msg.hexMode) ? msg.hexMode : prev.hexMode;
+            const nextWalk =
+                typeof msg.maxWalkMinutes === 'number' && Number.isFinite(msg.maxWalkMinutes)
+                    ? clampWalkMinutes(msg.maxWalkMinutes)
+                    : prev.maxWalkMinutes;
+
+            if (
+                prev.act === nextAct &&
+                prev.corridorFilter === nextFilter &&
+                prev.hexMode === nextHex &&
+                prev.maxWalkMinutes === nextWalk
+            ) {
+                return prev;
+            }
+
+            return {
+                ...prev,
+                act: nextAct,
+                corridorFilter: nextFilter,
+                hexMode: nextHex,
+                maxWalkMinutes: nextWalk
+            };
+        });
     }
 }
 
 export const screenEngine = ScreenEngine.getInstance();
-
-function arraysEqual(a: number[], b: number[]) {
-    if (a.length !== b.length) return false;
-    for (let i = 0; i < a.length; i++) {
-        if (a[i] !== b[i]) return false;
-    }
-    return true;
-}

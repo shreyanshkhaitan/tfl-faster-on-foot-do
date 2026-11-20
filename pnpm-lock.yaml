@@ -13,10 +13,10 @@ catalogs:
       specifier: ^9.2.11
       version: 9.2.11
     '@deck.gl/layers':
-      specifier: ^9.1.12
+      specifier: ^9.2.11
       version: 9.2.11
     '@deck.gl/react':
-      specifier: ^9.1.12
+      specifier: ^9.2.11
       version: 9.2.11
     '@phosphor-icons/react':
       specifier: ^2.1.10
