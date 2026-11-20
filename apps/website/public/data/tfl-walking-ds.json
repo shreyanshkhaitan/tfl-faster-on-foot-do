@@ -3,18 +3,18 @@
         "title": "Faster on Foot: Modeling the Tube Map's Geometric Illusion",
         "source": "Transport for London Open Data (walking.data.tfl.gov.uk & Unified API)",
         "summary": {
-            "totalLinksModeled": 454,
-            "totalStationsModeled": 331,
+            "totalLinksModeled": 456,
+            "totalStationsModeled": 332,
             "hexCellsExported": 1500,
-            "fasterOnFootCount": 84,
-            "fasterOnFootPct": 18.5,
-            "parityCount": 60,
-            "nudgeGoldCount": 71,
+            "fasterOnFootCount": 83,
+            "fasterOnFootPct": 18.2,
+            "parityCount": 58,
+            "nudgeGoldCount": 70,
             "policyPriorityCount": 13,
-            "medianSavedWhenFasterMin": 5.0,
-            "maxSavedMinutes": 32.8,
-            "olsMinutesPerCrowKm": 14.6,
-            "olsInterceptMinutes": 0.89,
+            "medianSavedWhenFasterMin": 4.8,
+            "maxSavedMinutes": 32.7,
+            "olsMinutesPerCrowKm": 14.57,
+            "olsInterceptMinutes": 0.92,
             "olsRSquared": 0.724,
             "meanCircuity": 1.24
         },
@@ -28,8 +28,8 @@
             {
                 "id": "king-s-cross-saint-pancras",
                 "label": "King's Cross St. Pancras",
-                "longitude": -0.12354,
-                "latitude": 51.53168
+                "longitude": -0.12319,
+                "latitude": 51.53066
             },
             {
                 "id": "oxford-circus",
@@ -80,7 +80,7 @@
             "position": [-0.26676, 51.51718],
             "degree": 1,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -24.8
+            "bestSavedMinutes": -25.2
         },
         {
             "id": "acton-town",
@@ -96,7 +96,7 @@
             "position": [-0.07569, 51.51425],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -2.0
+            "bestSavedMinutes": -2.1
         },
         {
             "id": "aldgate-east",
@@ -128,7 +128,7 @@
             "position": [-0.10635, 51.53184],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -6.0
+            "bestSavedMinutes": -6.2
         },
         {
             "id": "archway",
@@ -144,7 +144,7 @@
             "position": [-0.10746, 51.55866],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -1.1
+            "bestSavedMinutes": -1.3
         },
         {
             "id": "baker-street",
@@ -152,7 +152,7 @@
             "position": [-0.15713, 51.52288],
             "degree": 6,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 2.3
+            "bestSavedMinutes": 2.2
         },
         {
             "id": "balham",
@@ -160,7 +160,7 @@
             "position": [-0.15271, 51.44326],
             "degree": 6,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -5.5
+            "bestSavedMinutes": -5.6
         },
         {
             "id": "bank",
@@ -168,7 +168,7 @@
             "position": [-0.08909, 51.5134],
             "degree": 8,
             "fasterWalkCount": 3,
-            "bestSavedMinutes": 8.0
+            "bestSavedMinutes": 7.9
         },
         {
             "id": "barbican",
@@ -176,7 +176,7 @@
             "position": [-0.09799, 51.52027],
             "degree": 4,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 9.7
+            "bestSavedMinutes": 9.2
         },
         {
             "id": "barnes",
@@ -248,7 +248,7 @@
             "position": [-0.16465, 51.55031],
             "degree": 3,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 29.7
+            "bestSavedMinutes": 29.5
         },
         {
             "id": "bermondsey",
@@ -256,7 +256,7 @@
             "position": [-0.06399, 51.49775],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -6.4
+            "bestSavedMinutes": -6.6
         },
         {
             "id": "bethnal-green",
@@ -264,7 +264,7 @@
             "position": [-0.05551, 51.52722],
             "degree": 5,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 11.4
+            "bestSavedMinutes": 11.2
         },
         {
             "id": "blackfriars",
@@ -272,7 +272,7 @@
             "position": [-0.10417, 51.50961],
             "degree": 7,
             "fasterWalkCount": 4,
-            "bestSavedMinutes": 10.0
+            "bestSavedMinutes": 9.4
         },
         {
             "id": "blackheath",
@@ -288,7 +288,7 @@
             "position": [-0.04118, 51.58677],
             "degree": 3,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -7.6
+            "bestSavedMinutes": -7.9
         },
         {
             "id": "blackwall",
@@ -304,7 +304,7 @@
             "position": [-0.1488, 51.51336],
             "degree": 4,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 1.9
+            "bestSavedMinutes": 1.8
         },
         {
             "id": "borough",
@@ -312,7 +312,7 @@
             "position": [-0.09337, 51.5012],
             "degree": 3,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 4.9
+            "bestSavedMinutes": 4.5
         },
         {
             "id": "bounds-green",
@@ -360,7 +360,7 @@
             "position": [-0.11453, 51.46296],
             "degree": 3,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -6.0
+            "bestSavedMinutes": -6.2
         },
         {
             "id": "brockley",
@@ -432,7 +432,7 @@
             "position": [-0.1387, 51.54179],
             "degree": 3,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 21.2
+            "bestSavedMinutes": 20.6
         },
         {
             "id": "camden-town",
@@ -440,7 +440,7 @@
             "position": [-0.14274, 51.53929],
             "degree": 5,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 23.8
+            "bestSavedMinutes": 23.1
         },
         {
             "id": "canada-water",
@@ -456,7 +456,7 @@
             "position": [-0.01912, 51.50373],
             "degree": 4,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 8.9
+            "bestSavedMinutes": 8.7
         },
         {
             "id": "canning-town",
@@ -464,7 +464,7 @@
             "position": [0.00802, 51.51403],
             "degree": 6,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -3.0
+            "bestSavedMinutes": -2.9
         },
         {
             "id": "cannon-street",
@@ -472,7 +472,7 @@
             "position": [-0.09036, 51.51145],
             "degree": 4,
             "fasterWalkCount": 4,
-            "bestSavedMinutes": 7.9
+            "bestSavedMinutes": 7.8
         },
         {
             "id": "canonbury",
@@ -504,7 +504,7 @@
             "position": [-0.15339, 51.54412],
             "degree": 3,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 30.2
+            "bestSavedMinutes": 29.6
         },
         {
             "id": "chancery-lane",
@@ -512,7 +512,7 @@
             "position": [-0.11158, 51.51825],
             "degree": 6,
             "fasterWalkCount": 5,
-            "bestSavedMinutes": 14.1
+            "bestSavedMinutes": 10.7
         },
         {
             "id": "charing-cross",
@@ -520,7 +520,7 @@
             "position": [-0.12614, 51.50782],
             "degree": 5,
             "fasterWalkCount": 3,
-            "bestSavedMinutes": 4.9
+            "bestSavedMinutes": 4.8
         },
         {
             "id": "charlton",
@@ -616,7 +616,7 @@
             "position": [-0.12444, 51.51309],
             "degree": 4,
             "fasterWalkCount": 4,
-            "bestSavedMinutes": 9.7
+            "bestSavedMinutes": 9.5
         },
         {
             "id": "cricklewood",
@@ -664,7 +664,7 @@
             "position": [0.02742, 51.51876],
             "degree": 2,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 1.6
+            "bestSavedMinutes": 1.7
         },
         {
             "id": "cutty-sark",
@@ -672,7 +672,7 @@
             "position": [-0.0108, 51.48168],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -1.1
+            "bestSavedMinutes": -1.0
         },
         {
             "id": "cyprus",
@@ -720,7 +720,7 @@
             "position": [-0.02244, 51.47422],
             "degree": 3,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 32.8
+            "bestSavedMinutes": 32.7
         },
         {
             "id": "devons-road",
@@ -752,7 +752,7 @@
             "position": [-0.30213, 51.51499],
             "degree": 4,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -8.6
+            "bestSavedMinutes": -8.8
         },
         {
             "id": "ealing-common",
@@ -824,7 +824,7 @@
             "position": [-0.17015, 51.5203],
             "degree": 5,
             "fasterWalkCount": 3,
-            "bestSavedMinutes": 8.1
+            "bestSavedMinutes": 7.8
         },
         {
             "id": "elephant-and-castle",
@@ -832,7 +832,7 @@
             "position": [-0.09918, 51.4945],
             "degree": 6,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -0.8
+            "bestSavedMinutes": -0.9
         },
         {
             "id": "elverson-road",
@@ -848,7 +848,7 @@
             "position": [-0.12267, 51.50706],
             "degree": 4,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 4.9
+            "bestSavedMinutes": 4.8
         },
         {
             "id": "essex-road",
@@ -864,7 +864,7 @@
             "position": [-0.13275, 51.52737],
             "degree": 5,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -0.6
+            "bestSavedMinutes": -0.7
         },
         {
             "id": "euston-square",
@@ -880,7 +880,7 @@
             "position": [-0.10505, 51.52021],
             "degree": 5,
             "fasterWalkCount": 3,
-            "bestSavedMinutes": 14.1
+            "bestSavedMinutes": 10.7
         },
         {
             "id": "fenchurch-street",
@@ -904,7 +904,7 @@
             "position": [-0.18314, 51.55027],
             "degree": 3,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 26.0
+            "bestSavedMinutes": 25.8
         },
         {
             "id": "finsbury-park",
@@ -912,7 +912,7 @@
             "position": [-0.10588, 51.56478],
             "degree": 7,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -1.1
+            "bestSavedMinutes": -1.3
         },
         {
             "id": "forest-gate",
@@ -976,7 +976,7 @@
             "position": [-0.22671, 51.502],
             "degree": 3,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 25.9
+            "bestSavedMinutes": 22.3
         },
         {
             "id": "goodge-street",
@@ -1016,7 +1016,7 @@
             "position": [-0.0141, 51.47823],
             "degree": 4,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -1.1
+            "bestSavedMinutes": -1.0
         },
         {
             "id": "gunnersbury",
@@ -1064,7 +1064,7 @@
             "position": [-0.22362, 51.4923],
             "degree": 4,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -4.8
+            "bestSavedMinutes": -4.9
         },
         {
             "id": "hampstead",
@@ -1072,7 +1072,7 @@
             "position": [-0.17746, 51.55624],
             "degree": 3,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 26.0
+            "bestSavedMinutes": 25.8
         },
         {
             "id": "hampstead-heath",
@@ -1080,7 +1080,7 @@
             "position": [-0.1657, 51.55521],
             "degree": 3,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 29.7
+            "bestSavedMinutes": 29.5
         },
         {
             "id": "hanger-lane",
@@ -1096,7 +1096,7 @@
             "position": [-0.25777, 51.5363],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -9.2
+            "bestSavedMinutes": -10.4
         },
         {
             "id": "harringay",
@@ -1144,7 +1144,7 @@
             "position": [-0.02142, 51.50338],
             "degree": 2,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 8.9
+            "bestSavedMinutes": 8.7
         },
         {
             "id": "high-street-kensington",
@@ -1184,7 +1184,7 @@
             "position": [-0.12047, 51.51758],
             "degree": 5,
             "fasterWalkCount": 3,
-            "bestSavedMinutes": 11.4
+            "bestSavedMinutes": 11.2
         },
         {
             "id": "holland-park",
@@ -1280,15 +1280,15 @@
             "position": [-0.10596, 51.48834],
             "degree": 3,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -0.8
+            "bestSavedMinutes": -0.9
         },
         {
             "id": "kensal-green",
             "name": "Kensal Green",
             "position": [-0.22505, 51.53054],
-            "degree": 2,
+            "degree": 3,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -7.3
+            "bestSavedMinutes": -7.6
         },
         {
             "id": "kensal-rise",
@@ -1312,7 +1312,7 @@
             "position": [-0.14055, 51.55041],
             "degree": 4,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -1.0
+            "bestSavedMinutes": -1.2
         },
         {
             "id": "kentish-town-west",
@@ -1320,7 +1320,7 @@
             "position": [-0.14666, 51.54655],
             "degree": 4,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 30.2
+            "bestSavedMinutes": 29.6
         },
         {
             "id": "kew-bridge",
@@ -1336,7 +1336,7 @@
             "position": [-0.28515, 51.47707],
             "degree": 1,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -23.4
+            "bestSavedMinutes": -23.7
         },
         {
             "id": "kidbrooke",
@@ -1352,15 +1352,15 @@
             "position": [-0.20425, 51.54718],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -5.6
+            "bestSavedMinutes": -5.8
         },
         {
             "id": "kilburn-high-road",
             "name": "Kilburn High Road",
             "position": [-0.19224, 51.53728],
-            "degree": 1,
+            "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -6.7
+            "bestSavedMinutes": -4.9
         },
         {
             "id": "kilburn-park",
@@ -1368,7 +1368,7 @@
             "position": [-0.19423, 51.53498],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -2.0
+            "bestSavedMinutes": -2.1
         },
         {
             "id": "king-george-v",
@@ -1376,7 +1376,15 @@
             "position": [0.06262, 51.502],
             "degree": 1,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -4.9
+            "bestSavedMinutes": -4.7
+        },
+        {
+            "id": "king-s-cross-saint-pancras",
+            "name": "King's Cross St. Pancras",
+            "position": [-0.12319, 51.53066],
+            "degree": 9,
+            "fasterWalkCount": 0,
+            "bestSavedMinutes": -3.1
         },
         {
             "id": "knightsbridge",
@@ -1408,7 +1416,7 @@
             "position": [-0.11231, 51.49881],
             "degree": 3,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 5.0
+            "bestSavedMinutes": 4.7
         },
         {
             "id": "lancaster-gate",
@@ -1416,7 +1424,7 @@
             "position": [-0.17549, 51.51172],
             "degree": 3,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 4.1
+            "bestSavedMinutes": 3.8
         },
         {
             "id": "langdon-park",
@@ -1432,7 +1440,7 @@
             "position": [-0.2178, 51.51339],
             "degree": 3,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 19.2
+            "bestSavedMinutes": 17.2
         },
         {
             "id": "lea-bridge",
@@ -1496,7 +1504,7 @@
             "position": [-0.0398, 51.51247],
             "degree": 4,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -6.4
+            "bestSavedMinutes": -6.2
         },
         {
             "id": "liverpool-street",
@@ -1504,7 +1512,7 @@
             "position": [-0.08316, 51.51794],
             "degree": 7,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 6.0
+            "bestSavedMinutes": 4.8
         },
         {
             "id": "london-bridge",
@@ -1512,7 +1520,7 @@
             "position": [-0.08681, 51.50588],
             "degree": 6,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 3.3
+            "bestSavedMinutes": 3.1
         },
         {
             "id": "london-city-airport",
@@ -1520,7 +1528,7 @@
             "position": [0.04875, 51.50342],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -4.9
+            "bestSavedMinutes": -4.7
         },
         {
             "id": "london-fields",
@@ -1552,7 +1560,7 @@
             "position": [-0.09612, 51.57074],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -3.5
+            "bestSavedMinutes": -3.7
         },
         {
             "id": "manor-park",
@@ -1568,7 +1576,7 @@
             "position": [-0.09401, 51.51212],
             "degree": 3,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 8.0
+            "bestSavedMinutes": 7.9
         },
         {
             "id": "marble-arch",
@@ -1576,7 +1584,7 @@
             "position": [-0.15895, 51.51342],
             "degree": 3,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 8.1
+            "bestSavedMinutes": 7.8
         },
         {
             "id": "maryland",
@@ -1584,7 +1592,7 @@
             "position": [0.00581, 51.54608],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -6.7
+            "bestSavedMinutes": -6.9
         },
         {
             "id": "marylebone",
@@ -1592,7 +1600,7 @@
             "position": [-0.16301, 51.5216],
             "degree": 2,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 2.3
+            "bestSavedMinutes": 2.2
         },
         {
             "id": "maze-hill",
@@ -1624,7 +1632,7 @@
             "position": [-0.08597, 51.5107],
             "degree": 2,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 1.2
+            "bestSavedMinutes": 1.1
         },
         {
             "id": "moorgate",
@@ -1632,7 +1640,7 @@
             "position": [-0.08863, 51.51834],
             "degree": 4,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 0.4
+            "bestSavedMinutes": 0.3
         },
         {
             "id": "mornington-crescent",
@@ -1640,7 +1648,7 @@
             "position": [-0.13879, 51.53468],
             "degree": 3,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 21.2
+            "bestSavedMinutes": 20.6
         },
         {
             "id": "mortlake",
@@ -1672,7 +1680,7 @@
             "position": [-0.03243, 51.47635],
             "degree": 2,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 32.8
+            "bestSavedMinutes": 32.7
         },
         {
             "id": "new-cross-gate",
@@ -1720,7 +1728,7 @@
             "position": [0.0043, 51.50047],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -64.9
+            "bestSavedMinutes": -65.1
         },
         {
             "id": "north-sheen",
@@ -1768,7 +1776,7 @@
             "position": [-0.08819, 51.52607],
             "degree": 4,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 17.7
+            "bestSavedMinutes": 14.1
         },
         {
             "id": "oval",
@@ -1783,7 +1791,7 @@
             "name": "Oxford Circus",
             "position": [-0.1419, 51.51522],
             "degree": 6,
-            "fasterWalkCount": 3,
+            "fasterWalkCount": 2,
             "bestSavedMinutes": 1.9
         },
         {
@@ -1792,7 +1800,7 @@
             "position": [-0.17616, 51.51698],
             "degree": 4,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -3.2
+            "bestSavedMinutes": -3.3
         },
         {
             "id": "park-royal",
@@ -1832,7 +1840,7 @@
             "position": [-0.13376, 51.4891],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -2.4
+            "bestSavedMinutes": -2.5
         },
         {
             "id": "plaistow",
@@ -1840,7 +1848,7 @@
             "position": [0.01745, 51.53134],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -9.4
+            "bestSavedMinutes": -9.5
         },
         {
             "id": "pontoon-dock",
@@ -1864,7 +1872,7 @@
             "position": [0.03416, 51.50926],
             "degree": 2,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 1.6
+            "bestSavedMinutes": 1.7
         },
         {
             "id": "pudding-mill-lane",
@@ -1896,7 +1904,15 @@
             "position": [-0.20488, 51.53444],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -2.0
+            "bestSavedMinutes": -2.1
+        },
+        {
+            "id": "queens-park",
+            "name": "Queens Park (London)",
+            "position": [-0.20499, 51.53397],
+            "degree": 2,
+            "fasterWalkCount": 0,
+            "bestSavedMinutes": -4.9
         },
         {
             "id": "queens-road-peckham",
@@ -1920,7 +1936,7 @@
             "position": [-0.18715, 51.51031],
             "degree": 4,
             "fasterWalkCount": 3,
-            "bestSavedMinutes": 9.2
+            "bestSavedMinutes": 7.4
         },
         {
             "id": "ravenscourt-park",
@@ -1968,7 +1984,7 @@
             "position": [-0.18875, 51.51911],
             "degree": 4,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 9.2
+            "bestSavedMinutes": 7.4
         },
         {
             "id": "royal-victoria",
@@ -1976,7 +1992,7 @@
             "position": [0.01851, 51.50934],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -0.3
+            "bestSavedMinutes": -0.1
         },
         {
             "id": "russell-square",
@@ -1984,7 +2000,7 @@
             "position": [-0.12429, 51.52307],
             "degree": 3,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 7.6
+            "bestSavedMinutes": 6.8
         },
         {
             "id": "seven-sisters",
@@ -2008,7 +2024,7 @@
             "position": [-0.21921, 51.50479],
             "degree": 7,
             "fasterWalkCount": 3,
-            "bestSavedMinutes": 25.9
+            "bestSavedMinutes": 23.0
         },
         {
             "id": "shepherd-s-bush-market",
@@ -2024,7 +2040,7 @@
             "position": [-0.07525, 51.52338],
             "degree": 4,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 17.7
+            "bestSavedMinutes": 14.1
         },
         {
             "id": "sloane-square",
@@ -2032,7 +2048,7 @@
             "position": [-0.15638, 51.49227],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -5.3
+            "bestSavedMinutes": -5.5
         },
         {
             "id": "south-acton",
@@ -2112,7 +2128,7 @@
             "position": [-0.10533, 51.50427],
             "degree": 5,
             "fasterWalkCount": 4,
-            "bestSavedMinutes": 10.0
+            "bestSavedMinutes": 9.4
         },
         {
             "id": "saint-james-street",
@@ -2123,20 +2139,12 @@
             "bestSavedMinutes": -5.0
         },
         {
-            "id": "king-s-cross-saint-pancras",
-            "name": "St Pancras International",
-            "position": [-0.12354, 51.53168],
-            "degree": 9,
-            "fasterWalkCount": 0,
-            "bestSavedMinutes": -2.9
-        },
-        {
             "id": "saint-james-s-park",
             "name": "St. James's Park",
             "position": [-0.13361, 51.49954],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -3.6
+            "bestSavedMinutes": -3.8
         },
         {
             "id": "saint-john-s-wood",
@@ -2152,7 +2160,7 @@
             "position": [-0.09757, 51.51494],
             "degree": 6,
             "fasterWalkCount": 4,
-            "bestSavedMinutes": 9.7
+            "bestSavedMinutes": 9.2
         },
         {
             "id": "stamford-brook",
@@ -2176,7 +2184,7 @@
             "position": [0.00416, 51.52079],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -3.2
+            "bestSavedMinutes": -3.1
         },
         {
             "id": "stepney-green",
@@ -2208,7 +2216,7 @@
             "position": [-0.27586, 51.54404],
             "degree": 1,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -12.2
+            "bestSavedMinutes": -13.4
         },
         {
             "id": "stratford",
@@ -2232,7 +2240,7 @@
             "position": [-0.00964, 51.54527],
             "degree": 1,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -3.6
+            "bestSavedMinutes": -3.5
         },
         {
             "id": "streatham",
@@ -2296,7 +2304,7 @@
             "position": [-0.11426, 51.51101],
             "degree": 5,
             "fasterWalkCount": 3,
-            "bestSavedMinutes": 11.4
+            "bestSavedMinutes": 11.2
         },
         {
             "id": "tooting",
@@ -2327,8 +2335,8 @@
             "name": "Tottenham Court Road",
             "position": [-0.13089, 51.51602],
             "degree": 5,
-            "fasterWalkCount": 4,
-            "bestSavedMinutes": 6.2
+            "fasterWalkCount": 3,
+            "bestSavedMinutes": 6.1
         },
         {
             "id": "tottenham-hale",
@@ -2336,7 +2344,7 @@
             "position": [-0.06024, 51.58832],
             "degree": 5,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -7.6
+            "bestSavedMinutes": -7.9
         },
         {
             "id": "tower-gateway",
@@ -2344,7 +2352,7 @@
             "position": [-0.07481, 51.51062],
             "degree": 1,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -9.2
+            "bestSavedMinutes": -9.0
         },
         {
             "id": "tower-hill",
@@ -2360,7 +2368,7 @@
             "position": [-0.13843, 51.55682],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -1.0
+            "bestSavedMinutes": -1.2
         },
         {
             "id": "tulse-hill",
@@ -2408,7 +2416,7 @@
             "position": [-0.1233, 51.48574],
             "degree": 4,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -8.8
+            "bestSavedMinutes": -9.0
         },
         {
             "id": "victoria",
@@ -2416,7 +2424,7 @@
             "position": [-0.14383, 51.49581],
             "degree": 6,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -2.4
+            "bestSavedMinutes": -2.5
         },
         {
             "id": "walthamstow-central",
@@ -2480,7 +2488,7 @@
             "position": [-0.18378, 51.52326],
             "degree": 3,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 5.5
+            "bestSavedMinutes": 5.3
         },
         {
             "id": "waterloo",
@@ -2488,7 +2496,7 @@
             "position": [-0.11336, 51.50427],
             "degree": 7,
             "fasterWalkCount": 2,
-            "bestSavedMinutes": 2.9
+            "bestSavedMinutes": 2.8
         },
         {
             "id": "waterloo-east",
@@ -2512,7 +2520,7 @@
             "position": [-0.19559, 51.48717],
             "degree": 3,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -7.7
+            "bestSavedMinutes": -7.8
         },
         {
             "id": "west-dulwich",
@@ -2528,7 +2536,7 @@
             "position": [-0.32013, 51.51351],
             "degree": 1,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -8.6
+            "bestSavedMinutes": -8.8
         },
         {
             "id": "west-ham",
@@ -2608,7 +2616,7 @@
             "position": [-0.12598, 51.5016],
             "degree": 5,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 4.5
+            "bestSavedMinutes": 4.3
         },
         {
             "id": "white-city",
@@ -2616,7 +2624,7 @@
             "position": [-0.2243, 51.51196],
             "degree": 2,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -5.7
+            "bestSavedMinutes": -5.9
         },
         {
             "id": "white-hart-lane",
@@ -2632,7 +2640,7 @@
             "position": [-0.05986, 51.5195],
             "degree": 5,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 11.4
+            "bestSavedMinutes": 11.2
         },
         {
             "id": "willesden-green",
@@ -2648,7 +2656,7 @@
             "position": [-0.24301, 51.53256],
             "degree": 5,
             "fasterWalkCount": 0,
-            "bestSavedMinutes": -9.2
+            "bestSavedMinutes": -10.4
         },
         {
             "id": "wimbledon",
@@ -2688,7 +2696,7 @@
             "position": [-0.22453, 51.50967],
             "degree": 3,
             "fasterWalkCount": 1,
-            "bestSavedMinutes": 25.0
+            "bestSavedMinutes": 23.0
         },
         {
             "id": "woodgrange-park",
@@ -2837,8 +2845,8 @@
             "fromLines": "NR",
             "toLines": "NR",
             "walkMinutes": 36,
-            "railMinutes": 11.2,
-            "timeSavedMinutes": -24.8,
+            "railMinutes": 10.8,
+            "timeSavedMinutes": -25.2,
             "railHops": 1,
             "transfers": 0,
             "steps": 3600,
@@ -2982,8 +2990,8 @@
             "fromLines": "Metropolitan",
             "toLines": "Metropolitan",
             "walkMinutes": 9,
-            "railMinutes": 7.0,
-            "timeSavedMinutes": -2.0,
+            "railMinutes": 6.9,
+            "timeSavedMinutes": -2.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 900,
@@ -3040,8 +3048,8 @@
             "fromLines": "Hammersmith & City",
             "toLines": "Hammersmith & City",
             "walkMinutes": 11,
-            "railMinutes": 7.4,
-            "timeSavedMinutes": -3.6,
+            "railMinutes": 7.2,
+            "timeSavedMinutes": -3.8,
             "railHops": 1,
             "transfers": 0,
             "steps": 1100,
@@ -3098,8 +3106,8 @@
             "fromLines": "Hammersmith & City",
             "toLines": "Hammersmith & City",
             "walkMinutes": 12,
-            "railMinutes": 7.8,
-            "timeSavedMinutes": -4.2,
+            "railMinutes": 7.6,
+            "timeSavedMinutes": -4.4,
             "railHops": 1,
             "transfers": 0,
             "steps": 1200,
@@ -3264,28 +3272,28 @@
             "fromId": "angel",
             "fromName": "Angel",
             "toId": "king-s-cross-saint-pancras",
-            "toName": "St Pancras International",
+            "toName": "King's Cross St. Pancras",
             "start": [-0.10635, 51.53184],
-            "end": [-0.12354, 51.53168],
+            "end": [-0.12319, 51.53066],
             "line": "Northern",
             "lineColor": "#E2E8F0",
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 16,
-            "railMinutes": 10.0,
-            "timeSavedMinutes": -6.0,
+            "railMinutes": 9.8,
+            "timeSavedMinutes": -6.2,
             "railHops": 1,
             "transfers": 0,
             "steps": 1600,
             "kcal": 67,
-            "straightKm": 1.19,
-            "circuity": 1.08,
-            "pedDensity": 57.6144,
-            "carPeopleKm": 848.1,
-            "cycleKm": 324.56,
+            "straightKm": 1.17,
+            "circuity": 1.09,
+            "pedDensity": 79.2318,
+            "carPeopleKm": 1063.8,
+            "cycleKm": 360.02,
             "isCrossLine": false,
             "isOfficialQuicker": false,
-            "walkabilityScore": 64,
+            "walkabilityScore": 68,
             "quadrant": "rail_wins"
         },
         {
@@ -3301,8 +3309,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 20,
-            "railMinutes": 10.5,
-            "timeSavedMinutes": -9.5,
+            "railMinutes": 10.3,
+            "timeSavedMinutes": -9.7,
             "railHops": 1,
             "transfers": 0,
             "steps": 2000,
@@ -3388,8 +3396,8 @@
             "fromLines": "Piccadilly",
             "toLines": "Piccadilly",
             "walkMinutes": 10,
-            "railMinutes": 8.9,
-            "timeSavedMinutes": -1.1,
+            "railMinutes": 8.7,
+            "timeSavedMinutes": -1.3,
             "railHops": 1,
             "transfers": 0,
             "steps": 1000,
@@ -3446,8 +3454,8 @@
             "fromLines": "Jubilee",
             "toLines": "Jubilee",
             "walkMinutes": 16,
-            "railMinutes": 10.1,
-            "timeSavedMinutes": -5.9,
+            "railMinutes": 9.9,
+            "timeSavedMinutes": -6.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 1600,
@@ -3562,8 +3570,8 @@
             "fromLines": "Bakerloo",
             "toLines": "Bakerloo",
             "walkMinutes": 6,
-            "railMinutes": 8.3,
-            "timeSavedMinutes": 2.3,
+            "railMinutes": 8.2,
+            "timeSavedMinutes": 2.2,
             "railHops": 1,
             "transfers": 0,
             "steps": 600,
@@ -3620,8 +3628,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 17,
-            "railMinutes": 9.8,
-            "timeSavedMinutes": -7.2,
+            "railMinutes": 9.6,
+            "timeSavedMinutes": -7.4,
             "railHops": 1,
             "transfers": 0,
             "steps": 1700,
@@ -3736,8 +3744,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 15,
-            "railMinutes": 9.5,
-            "timeSavedMinutes": -5.5,
+            "railMinutes": 9.4,
+            "timeSavedMinutes": -5.6,
             "railHops": 1,
             "transfers": 0,
             "steps": 1500,
@@ -3794,8 +3802,8 @@
             "fromLines": "Central, Northern, Waterloo & City, DLR",
             "toLines": "District, Circle",
             "walkMinutes": 4,
-            "railMinutes": 11.9,
-            "timeSavedMinutes": 7.9,
+            "railMinutes": 11.8,
+            "timeSavedMinutes": 7.8,
             "railHops": 1,
             "transfers": 1,
             "steps": 400,
@@ -3823,8 +3831,8 @@
             "fromLines": "Central",
             "toLines": "Central",
             "walkMinutes": 10,
-            "railMinutes": 8.8,
-            "timeSavedMinutes": -1.2,
+            "railMinutes": 8.7,
+            "timeSavedMinutes": -1.3,
             "railHops": 1,
             "transfers": 0,
             "steps": 1000,
@@ -3852,8 +3860,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 6,
-            "railMinutes": 9.3,
-            "timeSavedMinutes": 3.3,
+            "railMinutes": 9.1,
+            "timeSavedMinutes": 3.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 600,
@@ -3881,8 +3889,8 @@
             "fromLines": "Central, Northern, Waterloo & City, DLR",
             "toLines": "District, Circle",
             "walkMinutes": 5,
-            "railMinutes": 13.0,
-            "timeSavedMinutes": 8.0,
+            "railMinutes": 12.9,
+            "timeSavedMinutes": 7.9,
             "railHops": 2,
             "transfers": 1,
             "steps": 500,
@@ -3910,8 +3918,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 9,
-            "railMinutes": 8.6,
-            "timeSavedMinutes": -0.4,
+            "railMinutes": 8.4,
+            "timeSavedMinutes": -0.6,
             "railHops": 1,
             "transfers": 0,
             "steps": 900,
@@ -3939,8 +3947,8 @@
             "fromLines": "Central",
             "toLines": "Central",
             "walkMinutes": 9,
-            "railMinutes": 8.7,
-            "timeSavedMinutes": -0.3,
+            "railMinutes": 8.6,
+            "timeSavedMinutes": -0.4,
             "railHops": 1,
             "transfers": 0,
             "steps": 900,
@@ -3968,8 +3976,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 29,
-            "railMinutes": 11.1,
-            "timeSavedMinutes": -17.9,
+            "railMinutes": 11.4,
+            "timeSavedMinutes": -17.6,
             "railHops": 1,
             "transfers": 0,
             "steps": 2900,
@@ -3997,8 +4005,8 @@
             "fromLines": "Waterloo & City",
             "toLines": "Waterloo & City",
             "walkMinutes": 33,
-            "railMinutes": 11.8,
-            "timeSavedMinutes": -21.2,
+            "railMinutes": 11.5,
+            "timeSavedMinutes": -21.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 3300,
@@ -4026,8 +4034,8 @@
             "fromLines": "Hammersmith&City, Metropolitan, Circle",
             "toLines": "Central",
             "walkMinutes": 12,
-            "railMinutes": 20.4,
-            "timeSavedMinutes": 8.4,
+            "railMinutes": 19.9,
+            "timeSavedMinutes": 7.9,
             "railHops": 5,
             "transfers": 1,
             "steps": 1200,
@@ -4055,8 +4063,8 @@
             "fromLines": "Metropolitan",
             "toLines": "Metropolitan",
             "walkMinutes": 8,
-            "railMinutes": 6.6,
-            "timeSavedMinutes": -1.4,
+            "railMinutes": 6.5,
+            "timeSavedMinutes": -1.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 800,
@@ -4084,8 +4092,8 @@
             "fromLines": "Metropolitan",
             "toLines": "Metropolitan",
             "walkMinutes": 10,
-            "railMinutes": 7.1,
-            "timeSavedMinutes": -2.9,
+            "railMinutes": 6.9,
+            "timeSavedMinutes": -3.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 1000,
@@ -4098,7 +4106,7 @@
             "isCrossLine": false,
             "isOfficialQuicker": false,
             "walkabilityScore": 79,
-            "quadrant": "parity_nudge"
+            "quadrant": "rail_wins"
         },
         {
             "id": "lnk-049",
@@ -4113,8 +4121,8 @@
             "fromLines": "Hammersmith&City, Metropolitan, Circle",
             "toLines": "Central",
             "walkMinutes": 8,
-            "railMinutes": 17.7,
-            "timeSavedMinutes": 9.7,
+            "railMinutes": 17.2,
+            "timeSavedMinutes": 9.2,
             "railHops": 4,
             "transfers": 1,
             "steps": 800,
@@ -4258,8 +4266,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 12,
-            "railMinutes": 7.2,
-            "timeSavedMinutes": -4.8,
+            "railMinutes": 7.1,
+            "timeSavedMinutes": -4.9,
             "railHops": 1,
             "transfers": 0,
             "steps": 1200,
@@ -4403,8 +4411,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 17,
-            "railMinutes": 7.7,
-            "timeSavedMinutes": -9.3,
+            "railMinutes": 7.5,
+            "timeSavedMinutes": -9.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 1700,
@@ -4635,8 +4643,8 @@
             "fromLines": "London Overground",
             "toLines": "Northern",
             "walkMinutes": 8,
-            "railMinutes": 37.7,
-            "timeSavedMinutes": 29.7,
+            "railMinutes": 37.5,
+            "timeSavedMinutes": 29.5,
             "railHops": 6,
             "transfers": 2,
             "steps": 800,
@@ -4664,8 +4672,8 @@
             "fromLines": "Jubilee",
             "toLines": "Jubilee",
             "walkMinutes": 16,
-            "railMinutes": 9.6,
-            "timeSavedMinutes": -6.4,
+            "railMinutes": 9.4,
+            "timeSavedMinutes": -6.6,
             "railHops": 1,
             "transfers": 0,
             "steps": 1600,
@@ -4693,8 +4701,8 @@
             "fromLines": "Jubilee",
             "toLines": "Jubilee",
             "walkMinutes": 28,
-            "railMinutes": 11.5,
-            "timeSavedMinutes": -16.5,
+            "railMinutes": 11.2,
+            "timeSavedMinutes": -16.8,
             "railHops": 1,
             "transfers": 0,
             "steps": 2800,
@@ -4838,9 +4846,9 @@
             "fromLines": "London Overground",
             "toLines": "London Overground, District, Hammersmith&City",
             "walkMinutes": 8,
-            "railMinutes": 19.4,
-            "timeSavedMinutes": 11.4,
-            "railHops": 3,
+            "railMinutes": 19.2,
+            "timeSavedMinutes": 11.2,
+            "railHops": 2,
             "transfers": 1,
             "steps": 800,
             "kcal": 34,
@@ -4867,8 +4875,8 @@
             "fromLines": "District, Circle, National Rail",
             "toLines": "Central",
             "walkMinutes": 12,
-            "railMinutes": 20.6,
-            "timeSavedMinutes": 8.6,
+            "railMinutes": 20.1,
+            "timeSavedMinutes": 8.1,
             "railHops": 5,
             "transfers": 1,
             "steps": 1200,
@@ -4954,8 +4962,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 10,
-            "railMinutes": 7.2,
-            "timeSavedMinutes": -2.8,
+            "railMinutes": 7.1,
+            "timeSavedMinutes": -2.9,
             "railHops": 1,
             "transfers": 0,
             "steps": 1000,
@@ -4983,8 +4991,8 @@
             "fromLines": "District, Circle, National Rail",
             "toLines": "Central",
             "walkMinutes": 9,
-            "railMinutes": 17.9,
-            "timeSavedMinutes": 8.9,
+            "railMinutes": 17.4,
+            "timeSavedMinutes": 8.4,
             "railHops": 4,
             "transfers": 1,
             "steps": 900,
@@ -5012,8 +5020,8 @@
             "fromLines": "District, Circle, National Rail",
             "toLines": "Jubilee",
             "walkMinutes": 11,
-            "railMinutes": 21.0,
-            "timeSavedMinutes": 10.0,
+            "railMinutes": 20.4,
+            "timeSavedMinutes": 9.4,
             "railHops": 5,
             "transfers": 1,
             "steps": 1100,
@@ -5041,8 +5049,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 10,
-            "railMinutes": 7.1,
-            "timeSavedMinutes": -2.9,
+            "railMinutes": 7.0,
+            "timeSavedMinutes": -3.0,
             "railHops": 1,
             "transfers": 0,
             "steps": 1000,
@@ -5186,8 +5194,8 @@
             "fromLines": "Victoria",
             "toLines": "Victoria",
             "walkMinutes": 18,
-            "railMinutes": 10.4,
-            "timeSavedMinutes": -7.6,
+            "railMinutes": 10.1,
+            "timeSavedMinutes": -7.9,
             "railHops": 1,
             "transfers": 0,
             "steps": 1800,
@@ -5215,8 +5223,8 @@
             "fromLines": "Victoria",
             "toLines": "Victoria",
             "walkMinutes": 24,
-            "railMinutes": 10.8,
-            "timeSavedMinutes": -13.2,
+            "railMinutes": 10.6,
+            "timeSavedMinutes": -13.4,
             "railHops": 1,
             "transfers": 0,
             "steps": 2400,
@@ -5302,8 +5310,8 @@
             "fromLines": "Jubilee",
             "toLines": "Jubilee",
             "walkMinutes": 14,
-            "railMinutes": 9.2,
-            "timeSavedMinutes": -4.8,
+            "railMinutes": 9.0,
+            "timeSavedMinutes": -5.0,
             "railHops": 1,
             "transfers": 0,
             "steps": 1400,
@@ -5331,8 +5339,8 @@
             "fromLines": "Central",
             "toLines": "Central",
             "walkMinutes": 7,
-            "railMinutes": 8.9,
-            "timeSavedMinutes": 1.9,
+            "railMinutes": 8.8,
+            "timeSavedMinutes": 1.8,
             "railHops": 1,
             "transfers": 0,
             "steps": 700,
@@ -5360,8 +5368,8 @@
             "fromLines": "Central",
             "toLines": "Central",
             "walkMinutes": 7,
-            "railMinutes": 8.5,
-            "timeSavedMinutes": 1.5,
+            "railMinutes": 8.4,
+            "timeSavedMinutes": 1.4,
             "railHops": 1,
             "transfers": 0,
             "steps": 700,
@@ -5389,8 +5397,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 13,
-            "railMinutes": 9.2,
-            "timeSavedMinutes": -3.8,
+            "railMinutes": 9.1,
+            "timeSavedMinutes": -3.9,
             "railHops": 1,
             "transfers": 0,
             "steps": 1300,
@@ -5418,8 +5426,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 9,
-            "railMinutes": 8.9,
-            "timeSavedMinutes": -0.1,
+            "railMinutes": 8.7,
+            "timeSavedMinutes": -0.3,
             "railHops": 1,
             "transfers": 0,
             "steps": 900,
@@ -5447,8 +5455,8 @@
             "fromLines": "Northern",
             "toLines": "Jubilee",
             "walkMinutes": 12,
-            "railMinutes": 16.9,
-            "timeSavedMinutes": 4.9,
+            "railMinutes": 16.5,
+            "timeSavedMinutes": 4.5,
             "railHops": 2,
             "transfers": 1,
             "steps": 1200,
@@ -5708,8 +5716,8 @@
             "fromLines": "Victoria",
             "toLines": "Victoria",
             "walkMinutes": 16,
-            "railMinutes": 10.0,
-            "timeSavedMinutes": -6.0,
+            "railMinutes": 9.8,
+            "timeSavedMinutes": -6.2,
             "railHops": 1,
             "transfers": 0,
             "steps": 1600,
@@ -5988,30 +5996,30 @@
         {
             "id": "lnk-114",
             "fromId": "king-s-cross-saint-pancras",
-            "fromName": "St Pancras International",
+            "fromName": "King's Cross St. Pancras",
             "toId": "caledonian-road",
             "toName": "Caledonian Road",
-            "start": [-0.12354, 51.53168],
+            "start": [-0.12319, 51.53066],
             "end": [-0.11849, 51.54852],
             "line": "Piccadilly",
             "lineColor": "#3B82F6",
             "fromLines": "Piccadilly",
             "toLines": "Piccadilly",
             "walkMinutes": 27,
-            "railMinutes": 11.7,
-            "timeSavedMinutes": -15.3,
+            "railMinutes": 11.6,
+            "timeSavedMinutes": -15.4,
             "railHops": 1,
             "transfers": 0,
             "steps": 2700,
             "kcal": 113,
-            "straightKm": 1.9,
-            "circuity": 1.13,
-            "pedDensity": 21.4892,
-            "carPeopleKm": 484.6,
-            "cycleKm": 133.83,
+            "straightKm": 2.01,
+            "circuity": 1.07,
+            "pedDensity": 39.5208,
+            "carPeopleKm": 596.2,
+            "cycleKm": 151.19,
             "isCrossLine": false,
             "isOfficialQuicker": false,
-            "walkabilityScore": 49,
+            "walkabilityScore": 59,
             "quadrant": "rail_wins"
         },
         {
@@ -6143,8 +6151,8 @@
             "fromLines": "London Overground",
             "toLines": "Northern",
             "walkMinutes": 11,
-            "railMinutes": 32.2,
-            "timeSavedMinutes": 21.2,
+            "railMinutes": 31.6,
+            "timeSavedMinutes": 20.6,
             "railHops": 5,
             "transfers": 2,
             "steps": 1100,
@@ -6201,8 +6209,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 19,
-            "railMinutes": 10.7,
-            "timeSavedMinutes": -8.3,
+            "railMinutes": 10.5,
+            "timeSavedMinutes": -8.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 1900,
@@ -6230,8 +6238,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 16,
-            "railMinutes": 10.2,
-            "timeSavedMinutes": -5.8,
+            "railMinutes": 9.9,
+            "timeSavedMinutes": -6.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 1600,
@@ -6259,8 +6267,8 @@
             "fromLines": "London Overground",
             "toLines": "Northern",
             "walkMinutes": 12,
-            "railMinutes": 35.8,
-            "timeSavedMinutes": 23.8,
+            "railMinutes": 35.1,
+            "timeSavedMinutes": 23.1,
             "railHops": 6,
             "transfers": 2,
             "steps": 1200,
@@ -6317,8 +6325,8 @@
             "fromLines": "Jubilee",
             "toLines": "Jubilee",
             "walkMinutes": 89,
-            "railMinutes": 12.4,
-            "timeSavedMinutes": -76.6,
+            "railMinutes": 12.0,
+            "timeSavedMinutes": -77.0,
             "railHops": 1,
             "transfers": 0,
             "steps": 8900,
@@ -6404,8 +6412,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 2,
-            "railMinutes": 10.9,
-            "timeSavedMinutes": 8.9,
+            "railMinutes": 10.7,
+            "timeSavedMinutes": 8.7,
             "railHops": 0,
             "transfers": 1,
             "steps": 200,
@@ -6433,8 +6441,8 @@
             "fromLines": "Jubilee",
             "toLines": "Jubilee",
             "walkMinutes": 76,
-            "railMinutes": 11.1,
-            "timeSavedMinutes": -64.9,
+            "railMinutes": 10.9,
+            "timeSavedMinutes": -65.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 7600,
@@ -6491,8 +6499,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 26,
-            "railMinutes": 7.9,
-            "timeSavedMinutes": -18.1,
+            "railMinutes": 8.1,
+            "timeSavedMinutes": -17.9,
             "railHops": 1,
             "transfers": 0,
             "steps": 2600,
@@ -6520,8 +6528,8 @@
             "fromLines": "Jubilee",
             "toLines": "Jubilee",
             "walkMinutes": 104,
-            "railMinutes": 10.8,
-            "timeSavedMinutes": -93.2,
+            "railMinutes": 10.6,
+            "timeSavedMinutes": -93.4,
             "railHops": 1,
             "transfers": 0,
             "steps": 10400,
@@ -6549,8 +6557,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 11,
-            "railMinutes": 8.0,
-            "timeSavedMinutes": -3.0,
+            "railMinutes": 8.1,
+            "timeSavedMinutes": -2.9,
             "railHops": 1,
             "transfers": 0,
             "steps": 1100,
@@ -6578,8 +6586,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 11,
-            "railMinutes": 7.7,
-            "timeSavedMinutes": -3.3,
+            "railMinutes": 7.8,
+            "timeSavedMinutes": -3.2,
             "railHops": 1,
             "transfers": 0,
             "steps": 1100,
@@ -6607,8 +6615,8 @@
             "fromLines": "Jubilee",
             "toLines": "Jubilee",
             "walkMinutes": 22,
-            "railMinutes": 10.1,
-            "timeSavedMinutes": -11.9,
+            "railMinutes": 10.3,
+            "timeSavedMinutes": -11.7,
             "railHops": 2,
             "transfers": 0,
             "steps": 2200,
@@ -6636,8 +6644,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 19,
-            "railMinutes": 9.6,
-            "timeSavedMinutes": -9.4,
+            "railMinutes": 9.8,
+            "timeSavedMinutes": -9.2,
             "railHops": 1,
             "transfers": 0,
             "steps": 1900,
@@ -6665,8 +6673,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 4,
-            "railMinutes": 6.1,
-            "timeSavedMinutes": 2.1,
+            "railMinutes": 6.0,
+            "timeSavedMinutes": 2.0,
             "railHops": 1,
             "transfers": 0,
             "steps": 400,
@@ -6694,8 +6702,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 5,
-            "railMinutes": 6.2,
-            "timeSavedMinutes": 1.2,
+            "railMinutes": 6.1,
+            "timeSavedMinutes": 1.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 500,
@@ -6723,8 +6731,8 @@
             "fromLines": "District, Circle, National Rail",
             "toLines": "Central",
             "walkMinutes": 8,
-            "railMinutes": 14.5,
-            "timeSavedMinutes": 6.5,
+            "railMinutes": 14.3,
+            "timeSavedMinutes": 6.3,
             "railHops": 2,
             "transfers": 1,
             "steps": 800,
@@ -6897,8 +6905,8 @@
             "fromLines": "London Overground",
             "toLines": "Northern",
             "walkMinutes": 8,
-            "railMinutes": 38.2,
-            "timeSavedMinutes": 30.2,
+            "railMinutes": 37.6,
+            "timeSavedMinutes": 29.6,
             "railHops": 7,
             "transfers": 2,
             "steps": 800,
@@ -6926,9 +6934,9 @@
             "fromLines": "Central",
             "toLines": "Hammersmith&City, Metropolitan, Circle, National Rail",
             "walkMinutes": 8,
-            "railMinutes": 22.1,
-            "timeSavedMinutes": 14.1,
-            "railHops": 6,
+            "railMinutes": 18.7,
+            "timeSavedMinutes": 10.7,
+            "railHops": 3,
             "transfers": 1,
             "steps": 800,
             "kcal": 34,
@@ -7013,8 +7021,8 @@
             "fromLines": "Central",
             "toLines": "District, Circle",
             "walkMinutes": 14,
-            "railMinutes": 22.7,
-            "timeSavedMinutes": 8.7,
+            "railMinutes": 22.1,
+            "timeSavedMinutes": 8.1,
             "railHops": 6,
             "transfers": 1,
             "steps": 1400,
@@ -7042,8 +7050,8 @@
             "fromLines": "Bakerloo",
             "toLines": "Bakerloo",
             "walkMinutes": 3,
-            "railMinutes": 7.9,
-            "timeSavedMinutes": 4.9,
+            "railMinutes": 7.8,
+            "timeSavedMinutes": 4.8,
             "railHops": 1,
             "transfers": 0,
             "steps": 300,
@@ -7071,8 +7079,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 7,
-            "railMinutes": 8.3,
-            "timeSavedMinutes": 1.3,
+            "railMinutes": 8.2,
+            "timeSavedMinutes": 1.2,
             "railHops": 1,
             "transfers": 0,
             "steps": 700,
@@ -7100,8 +7108,8 @@
             "fromLines": "Bakerloo",
             "toLines": "Bakerloo",
             "walkMinutes": 11,
-            "railMinutes": 8.6,
-            "timeSavedMinutes": -2.4,
+            "railMinutes": 8.5,
+            "timeSavedMinutes": -2.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 1100,
@@ -7158,8 +7166,8 @@
             "fromLines": "Bakerloo, Northern, National Rail",
             "toLines": "District, Jubilee, Circle",
             "walkMinutes": 9,
-            "railMinutes": 13.5,
-            "timeSavedMinutes": 4.5,
+            "railMinutes": 13.3,
+            "timeSavedMinutes": 4.3,
             "railHops": 2,
             "transfers": 1,
             "steps": 900,
@@ -7883,8 +7891,8 @@
             "fromLines": "Piccadilly",
             "toLines": "District, Circle",
             "walkMinutes": 11,
-            "railMinutes": 20.7,
-            "timeSavedMinutes": 9.7,
+            "railMinutes": 20.5,
+            "timeSavedMinutes": 9.5,
             "railHops": 4,
             "transfers": 2,
             "steps": 1100,
@@ -7912,8 +7920,8 @@
             "fromLines": "Piccadilly",
             "toLines": "Central, Northern",
             "walkMinutes": 8,
-            "railMinutes": 14.2,
-            "timeSavedMinutes": 6.2,
+            "railMinutes": 14.1,
+            "timeSavedMinutes": 6.1,
             "railHops": 2,
             "transfers": 1,
             "steps": 800,
@@ -8173,8 +8181,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 7,
-            "railMinutes": 8.6,
-            "timeSavedMinutes": 1.6,
+            "railMinutes": 8.7,
+            "timeSavedMinutes": 1.7,
             "railHops": 1,
             "transfers": 0,
             "steps": 700,
@@ -8202,8 +8210,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 9,
-            "railMinutes": 8.7,
-            "timeSavedMinutes": -0.3,
+            "railMinutes": 8.9,
+            "timeSavedMinutes": -0.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 900,
@@ -8231,8 +8239,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 8,
-            "railMinutes": 6.9,
-            "timeSavedMinutes": -1.1,
+            "railMinutes": 7.0,
+            "timeSavedMinutes": -1.0,
             "railHops": 1,
             "transfers": 0,
             "steps": 800,
@@ -8260,8 +8268,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 12,
-            "railMinutes": 7.5,
-            "timeSavedMinutes": -4.5,
+            "railMinutes": 7.6,
+            "timeSavedMinutes": -4.4,
             "railHops": 1,
             "transfers": 0,
             "steps": 1200,
@@ -8492,8 +8500,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 12,
-            "railMinutes": 7.6,
-            "timeSavedMinutes": -4.4,
+            "railMinutes": 7.7,
+            "timeSavedMinutes": -4.3,
             "railHops": 1,
             "transfers": 0,
             "steps": 1200,
@@ -8521,8 +8529,8 @@
             "fromLines": "London Overground, National Rail",
             "toLines": "DLR",
             "walkMinutes": 8,
-            "railMinutes": 40.8,
-            "timeSavedMinutes": 32.8,
+            "railMinutes": 40.7,
+            "timeSavedMinutes": 32.7,
             "railHops": 10,
             "transfers": 2,
             "steps": 800,
@@ -8695,8 +8703,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 18,
-            "railMinutes": 8.0,
-            "timeSavedMinutes": -10.0,
+            "railMinutes": 7.8,
+            "timeSavedMinutes": -10.2,
             "railHops": 1,
             "transfers": 0,
             "steps": 1800,
@@ -8724,8 +8732,8 @@
             "fromLines": "Central",
             "toLines": "Central",
             "walkMinutes": 24,
-            "railMinutes": 10.8,
-            "timeSavedMinutes": -13.2,
+            "railMinutes": 10.5,
+            "timeSavedMinutes": -13.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 2400,
@@ -8753,8 +8761,8 @@
             "fromLines": "NR",
             "toLines": "NR",
             "walkMinutes": 17,
-            "railMinutes": 8.4,
-            "timeSavedMinutes": -8.6,
+            "railMinutes": 8.2,
+            "timeSavedMinutes": -8.8,
             "railHops": 1,
             "transfers": 0,
             "steps": 1700,
@@ -9072,8 +9080,8 @@
             "fromLines": "District, Hammersmith&City, Circle",
             "toLines": "Central",
             "walkMinutes": 14,
-            "railMinutes": 18.1,
-            "timeSavedMinutes": 4.1,
+            "railMinutes": 17.8,
+            "timeSavedMinutes": 3.8,
             "railHops": 3,
             "transfers": 1,
             "steps": 1400,
@@ -9101,8 +9109,8 @@
             "fromLines": "Bakerloo",
             "toLines": "Central",
             "walkMinutes": 13,
-            "railMinutes": 21.1,
-            "timeSavedMinutes": 8.1,
+            "railMinutes": 20.8,
+            "timeSavedMinutes": 7.8,
             "railHops": 4,
             "transfers": 1,
             "steps": 1300,
@@ -9130,8 +9138,8 @@
             "fromLines": "Bakerloo",
             "toLines": "Bakerloo",
             "walkMinutes": 7,
-            "railMinutes": 8.5,
-            "timeSavedMinutes": 1.5,
+            "railMinutes": 8.4,
+            "timeSavedMinutes": 1.4,
             "railHops": 1,
             "transfers": 0,
             "steps": 700,
@@ -9159,8 +9167,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 10,
-            "railMinutes": 6.8,
-            "timeSavedMinutes": -3.2,
+            "railMinutes": 6.7,
+            "timeSavedMinutes": -3.3,
             "railHops": 1,
             "transfers": 0,
             "steps": 1000,
@@ -9188,8 +9196,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 10,
-            "railMinutes": 9.2,
-            "timeSavedMinutes": -0.8,
+            "railMinutes": 9.1,
+            "timeSavedMinutes": -0.9,
             "railHops": 1,
             "transfers": 0,
             "steps": 1000,
@@ -9217,8 +9225,8 @@
             "fromLines": "Bakerloo",
             "toLines": "Bakerloo",
             "walkMinutes": 18,
-            "railMinutes": 9.7,
-            "timeSavedMinutes": -8.3,
+            "railMinutes": 9.5,
+            "timeSavedMinutes": -8.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 1800,
@@ -9333,8 +9341,8 @@
             "fromLines": "Bakerloo",
             "toLines": "Bakerloo",
             "walkMinutes": 6,
-            "railMinutes": 8.9,
-            "timeSavedMinutes": 2.9,
+            "railMinutes": 8.8,
+            "timeSavedMinutes": 2.8,
             "railHops": 1,
             "transfers": 0,
             "steps": 600,
@@ -9362,8 +9370,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 10,
-            "railMinutes": 7.0,
-            "timeSavedMinutes": -3.0,
+            "railMinutes": 6.9,
+            "timeSavedMinutes": -3.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 1000,
@@ -9376,7 +9384,7 @@
             "isCrossLine": false,
             "isOfficialQuicker": false,
             "walkabilityScore": 71,
-            "quadrant": "parity_nudge"
+            "quadrant": "rail_wins"
         },
         {
             "id": "lnk-233",
@@ -9439,31 +9447,31 @@
         {
             "id": "lnk-235",
             "fromId": "king-s-cross-saint-pancras",
-            "fromName": "St Pancras International",
+            "fromName": "King's Cross St. Pancras",
             "toId": "euston",
             "toName": "Euston",
-            "start": [-0.12354, 51.53168],
+            "start": [-0.12319, 51.53066],
             "end": [-0.13275, 51.52737],
             "line": "Northern",
             "lineColor": "#E2E8F0",
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 12,
-            "railMinutes": 9.1,
-            "timeSavedMinutes": -2.9,
+            "railMinutes": 8.9,
+            "timeSavedMinutes": -3.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 1200,
             "kcal": 50,
-            "straightKm": 0.8,
-            "circuity": 1.2,
-            "pedDensity": 63.8352,
-            "carPeopleKm": 762.9,
-            "cycleKm": 172.42,
+            "straightKm": 0.76,
+            "circuity": 1.27,
+            "pedDensity": 85.4526,
+            "carPeopleKm": 978.6,
+            "cycleKm": 207.88,
             "isCrossLine": false,
             "isOfficialQuicker": false,
-            "walkabilityScore": 67,
-            "quadrant": "parity_nudge"
+            "walkabilityScore": 70,
+            "quadrant": "rail_wins"
         },
         {
             "id": "lnk-236",
@@ -9478,8 +9486,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 11,
-            "railMinutes": 9.4,
-            "timeSavedMinutes": -1.6,
+            "railMinutes": 9.2,
+            "timeSavedMinutes": -1.8,
             "railHops": 1,
             "transfers": 0,
             "steps": 1100,
@@ -9536,8 +9544,8 @@
             "fromLines": "Victoria",
             "toLines": "Victoria",
             "walkMinutes": 9,
-            "railMinutes": 8.4,
-            "timeSavedMinutes": -0.6,
+            "railMinutes": 8.3,
+            "timeSavedMinutes": -0.7,
             "railHops": 1,
             "transfers": 0,
             "steps": 900,
@@ -9615,28 +9623,28 @@
             "fromId": "euston-square",
             "fromName": "Euston Square",
             "toId": "king-s-cross-saint-pancras",
-            "toName": "St Pancras International",
+            "toName": "King's Cross St. Pancras",
             "start": [-0.13583, 51.5256],
-            "end": [-0.12354, 51.53168],
+            "end": [-0.12319, 51.53066],
             "line": "Metropolitan",
             "lineColor": "#9B0056",
             "fromLines": "Metropolitan",
             "toLines": "Metropolitan",
             "walkMinutes": 15,
-            "railMinutes": 8.0,
-            "timeSavedMinutes": -7.0,
+            "railMinutes": 7.7,
+            "timeSavedMinutes": -7.3,
             "railHops": 1,
             "transfers": 0,
             "steps": 1500,
             "kcal": 63,
-            "straightKm": 1.09,
-            "circuity": 1.1,
-            "pedDensity": 77.0953,
-            "carPeopleKm": 1000.3,
-            "cycleKm": 186.88,
+            "straightKm": 1.04,
+            "circuity": 1.15,
+            "pedDensity": 126.1049,
+            "carPeopleKm": 1640.9,
+            "cycleKm": 247.48,
             "isCrossLine": false,
             "isOfficialQuicker": false,
-            "walkabilityScore": 68,
+            "walkabilityScore": 73,
             "quadrant": "rail_wins"
         },
         {
@@ -9644,28 +9652,28 @@
             "fromId": "farringdon",
             "fromName": "Farringdon",
             "toId": "king-s-cross-saint-pancras",
-            "toName": "St Pancras International",
+            "toName": "King's Cross St. Pancras",
             "start": [-0.10505, 51.52021],
-            "end": [-0.12354, 51.53168],
+            "end": [-0.12319, 51.53066],
             "line": "Metropolitan",
             "lineColor": "#9B0056",
             "fromLines": "Metropolitan",
             "toLines": "Metropolitan",
             "walkMinutes": 26,
-            "railMinutes": 9.7,
-            "timeSavedMinutes": -16.3,
+            "railMinutes": 9.2,
+            "timeSavedMinutes": -16.8,
             "railHops": 1,
             "transfers": 0,
             "steps": 2600,
             "kcal": 109,
-            "straightKm": 1.81,
-            "circuity": 1.15,
-            "pedDensity": 48.7482,
-            "carPeopleKm": 694.8,
-            "cycleKm": 331.48,
+            "straightKm": 1.71,
+            "circuity": 1.22,
+            "pedDensity": 64.1892,
+            "carPeopleKm": 848.8,
+            "cycleKm": 356.8,
             "isCrossLine": false,
             "isOfficialQuicker": false,
-            "walkabilityScore": 62,
+            "walkabilityScore": 66,
             "quadrant": "rail_wins"
         },
         {
@@ -9681,9 +9689,9 @@
             "fromLines": "Hammersmith&City, Metropolitan, Circle",
             "toLines": "Central",
             "walkMinutes": 11,
-            "railMinutes": 19.4,
-            "timeSavedMinutes": 8.4,
-            "railHops": 5,
+            "railMinutes": 17.8,
+            "timeSavedMinutes": 6.8,
+            "railHops": 3,
             "transfers": 1,
             "steps": 1100,
             "kcal": 46,
@@ -9797,8 +9805,8 @@
             "fromLines": "Jubilee",
             "toLines": "Jubilee",
             "walkMinutes": 10,
-            "railMinutes": 9.1,
-            "timeSavedMinutes": -0.9,
+            "railMinutes": 9.0,
+            "timeSavedMinutes": -1.0,
             "railHops": 1,
             "transfers": 0,
             "steps": 1000,
@@ -9826,8 +9834,8 @@
             "fromLines": "London Overground",
             "toLines": "Northern",
             "walkMinutes": 11,
-            "railMinutes": 37.0,
-            "timeSavedMinutes": 26.0,
+            "railMinutes": 36.8,
+            "timeSavedMinutes": 25.8,
             "railHops": 6,
             "transfers": 2,
             "steps": 1100,
@@ -9961,30 +9969,30 @@
         {
             "id": "lnk-253",
             "fromId": "king-s-cross-saint-pancras",
-            "fromName": "St Pancras International",
+            "fromName": "King's Cross St. Pancras",
             "toId": "finsbury-park",
             "toName": "Finsbury Park",
-            "start": [-0.12354, 51.53168],
+            "start": [-0.12319, 51.53066],
             "end": [-0.10588, 51.56478],
             "line": "NR",
             "lineColor": "#94A3B8",
             "fromLines": "NR",
             "toLines": "NR",
             "walkMinutes": 59,
-            "railMinutes": 14.8,
-            "timeSavedMinutes": -44.2,
+            "railMinutes": 15.0,
+            "timeSavedMinutes": -44.0,
             "railHops": 1,
             "transfers": 0,
             "steps": 5900,
             "kcal": 248,
-            "straightKm": 3.88,
-            "circuity": 1.22,
-            "pedDensity": 29.1317,
-            "carPeopleKm": 578.0,
-            "cycleKm": 189.0,
+            "straightKm": 3.98,
+            "circuity": 1.19,
+            "pedDensity": 38.7585,
+            "carPeopleKm": 539.4,
+            "cycleKm": 152.61,
             "isCrossLine": false,
             "isOfficialQuicker": false,
-            "walkabilityScore": 53,
+            "walkabilityScore": 60,
             "quadrant": "rail_wins"
         },
         {
@@ -10000,8 +10008,8 @@
             "fromLines": "Piccadilly",
             "toLines": "Piccadilly",
             "walkMinutes": 13,
-            "railMinutes": 9.5,
-            "timeSavedMinutes": -3.5,
+            "railMinutes": 9.3,
+            "timeSavedMinutes": -3.7,
             "railHops": 1,
             "transfers": 0,
             "steps": 1300,
@@ -10029,8 +10037,8 @@
             "fromLines": "Victoria",
             "toLines": "Victoria",
             "walkMinutes": 38,
-            "railMinutes": 14.3,
-            "timeSavedMinutes": -23.7,
+            "railMinutes": 13.8,
+            "timeSavedMinutes": -24.2,
             "railHops": 1,
             "transfers": 0,
             "steps": 3800,
@@ -10203,8 +10211,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 15,
-            "railMinutes": 7.3,
-            "timeSavedMinutes": -7.7,
+            "railMinutes": 7.2,
+            "timeSavedMinutes": -7.8,
             "railHops": 1,
             "transfers": 0,
             "steps": 1500,
@@ -10319,8 +10327,8 @@
             "fromLines": "Hammersmith & City",
             "toLines": "Hammersmith & City",
             "walkMinutes": 17,
-            "railMinutes": 8.0,
-            "timeSavedMinutes": -9.0,
+            "railMinutes": 7.8,
+            "timeSavedMinutes": -9.2,
             "railHops": 1,
             "transfers": 0,
             "steps": 1700,
@@ -10348,9 +10356,9 @@
             "fromLines": "Hammersmith&City, Circle",
             "toLines": "Central",
             "walkMinutes": 8,
-            "railMinutes": 33.9,
-            "timeSavedMinutes": 25.9,
-            "railHops": 8,
+            "railMinutes": 30.3,
+            "timeSavedMinutes": 22.3,
+            "railHops": 6,
             "transfers": 2,
             "steps": 800,
             "kcal": 34,
@@ -10464,9 +10472,9 @@
             "fromLines": "Northern",
             "toLines": "Piccadilly",
             "walkMinutes": 12,
-            "railMinutes": 19.6,
-            "timeSavedMinutes": 7.6,
-            "railHops": 5,
+            "railMinutes": 18.8,
+            "timeSavedMinutes": 6.8,
+            "railHops": 4,
             "transfers": 1,
             "steps": 1200,
             "kcal": 50,
@@ -10493,8 +10501,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 7,
-            "railMinutes": 8.6,
-            "timeSavedMinutes": 1.6,
+            "railMinutes": 8.5,
+            "timeSavedMinutes": 1.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 700,
@@ -10812,8 +10820,8 @@
             "fromLines": "Victoria",
             "toLines": "Victoria",
             "walkMinutes": 19,
-            "railMinutes": 10.2,
-            "timeSavedMinutes": -8.8,
+            "railMinutes": 9.9,
+            "timeSavedMinutes": -9.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 1900,
@@ -10841,8 +10849,8 @@
             "fromLines": "Jubilee",
             "toLines": "Jubilee",
             "walkMinutes": 21,
-            "railMinutes": 10.3,
-            "timeSavedMinutes": -10.7,
+            "railMinutes": 10.1,
+            "timeSavedMinutes": -10.9,
             "railHops": 1,
             "transfers": 0,
             "steps": 2100,
@@ -10899,8 +10907,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 33,
-            "railMinutes": 9.6,
-            "timeSavedMinutes": -23.4,
+            "railMinutes": 9.3,
+            "timeSavedMinutes": -23.7,
             "railHops": 1,
             "transfers": 0,
             "steps": 3300,
@@ -10957,8 +10965,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 21,
-            "railMinutes": 8.9,
-            "timeSavedMinutes": -12.1,
+            "railMinutes": 8.7,
+            "timeSavedMinutes": -12.3,
             "railHops": 1,
             "transfers": 0,
             "steps": 2100,
@@ -11247,8 +11255,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 14,
-            "railMinutes": 7.5,
-            "timeSavedMinutes": -6.5,
+            "railMinutes": 7.3,
+            "timeSavedMinutes": -6.7,
             "railHops": 1,
             "transfers": 0,
             "steps": 1400,
@@ -11276,8 +11284,8 @@
             "fromLines": "Piccadilly",
             "toLines": "Piccadilly",
             "walkMinutes": 30,
-            "railMinutes": 11.2,
-            "timeSavedMinutes": -18.8,
+            "railMinutes": 11.1,
+            "timeSavedMinutes": -18.9,
             "railHops": 3,
             "transfers": 0,
             "steps": 3000,
@@ -11334,8 +11342,8 @@
             "fromLines": "Bakerloo",
             "toLines": "Bakerloo",
             "walkMinutes": 23,
-            "railMinutes": 10.8,
-            "timeSavedMinutes": -12.2,
+            "railMinutes": 9.6,
+            "timeSavedMinutes": -13.4,
             "railHops": 1,
             "transfers": 0,
             "steps": 2300,
@@ -11363,8 +11371,8 @@
             "fromLines": "Bakerloo",
             "toLines": "Bakerloo",
             "walkMinutes": 19,
-            "railMinutes": 9.8,
-            "timeSavedMinutes": -9.2,
+            "railMinutes": 8.6,
+            "timeSavedMinutes": -10.4,
             "railHops": 1,
             "transfers": 0,
             "steps": 1900,
@@ -11643,30 +11651,30 @@
         {
             "id": "lnk-311",
             "fromId": "king-s-cross-saint-pancras",
-            "fromName": "St Pancras International",
+            "fromName": "King's Cross St. Pancras",
             "toId": "highbury-and-islington",
             "toName": "Highbury & Islington",
-            "start": [-0.12354, 51.53168],
+            "start": [-0.12319, 51.53066],
             "end": [-0.10354, 51.54627],
             "line": "Victoria",
             "lineColor": "#0098D4",
             "fromLines": "Victoria",
             "toLines": "Victoria",
             "walkMinutes": 35,
-            "railMinutes": 12.2,
-            "timeSavedMinutes": -22.8,
+            "railMinutes": 12.0,
+            "timeSavedMinutes": -23.0,
             "railHops": 1,
             "transfers": 0,
             "steps": 3500,
             "kcal": 147,
-            "straightKm": 2.13,
-            "circuity": 1.31,
-            "pedDensity": 29.7775,
-            "carPeopleKm": 511.6,
-            "cycleKm": 154.0,
+            "straightKm": 2.2,
+            "circuity": 1.27,
+            "pedDensity": 42.6996,
+            "carPeopleKm": 633.3,
+            "cycleKm": 192.24,
             "isCrossLine": false,
             "isOfficialQuicker": false,
-            "walkabilityScore": 55,
+            "walkabilityScore": 60,
             "quadrant": "rail_wins"
         },
         {
@@ -11740,8 +11748,8 @@
             "fromLines": "Central, Piccadilly",
             "toLines": "District, Circle",
             "walkMinutes": 11,
-            "railMinutes": 22.4,
-            "timeSavedMinutes": 11.4,
+            "railMinutes": 22.2,
+            "timeSavedMinutes": 11.2,
             "railHops": 5,
             "transfers": 2,
             "steps": 1100,
@@ -11769,8 +11777,8 @@
             "fromLines": "Central",
             "toLines": "Central",
             "walkMinutes": 10,
-            "railMinutes": 9.0,
-            "timeSavedMinutes": -1.0,
+            "railMinutes": 8.9,
+            "timeSavedMinutes": -1.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 1000,
@@ -11827,8 +11835,8 @@
             "fromLines": "Central",
             "toLines": "Central",
             "walkMinutes": 11,
-            "railMinutes": 9.5,
-            "timeSavedMinutes": -1.5,
+            "railMinutes": 9.4,
+            "timeSavedMinutes": -1.6,
             "railHops": 1,
             "transfers": 0,
             "steps": 1100,
@@ -12030,8 +12038,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 25,
-            "railMinutes": 11.5,
-            "timeSavedMinutes": -13.5,
+            "railMinutes": 11.2,
+            "timeSavedMinutes": -13.8,
             "railHops": 1,
             "transfers": 0,
             "steps": 2500,
@@ -12059,8 +12067,8 @@
             "fromLines": "Bakerloo",
             "toLines": "Bakerloo",
             "walkMinutes": 18,
-            "railMinutes": 10.7,
-            "timeSavedMinutes": -7.3,
+            "railMinutes": 10.4,
+            "timeSavedMinutes": -7.6,
             "railHops": 1,
             "transfers": 0,
             "steps": 1800,
@@ -12077,6 +12085,35 @@
         },
         {
             "id": "lnk-328",
+            "fromId": "kensal-green",
+            "fromName": "Kensal Green",
+            "toId": "queens-park",
+            "toName": "Queens Park (London)",
+            "start": [-0.22505, 51.53054],
+            "end": [-0.20499, 51.53397],
+            "line": "LO",
+            "lineColor": "#EE7C0E",
+            "fromLines": "LO",
+            "toLines": "LO",
+            "walkMinutes": 18,
+            "railMinutes": 9.2,
+            "timeSavedMinutes": -8.8,
+            "railHops": 1,
+            "transfers": 0,
+            "steps": 1800,
+            "kcal": 76,
+            "straightKm": 1.44,
+            "circuity": 1.0,
+            "pedDensity": 14.0403,
+            "carPeopleKm": 390.8,
+            "cycleKm": 34.3,
+            "isCrossLine": false,
+            "isOfficialQuicker": false,
+            "walkabilityScore": 41,
+            "quadrant": "rail_wins"
+        },
+        {
+            "id": "lnk-329",
             "fromId": "kensal-green",
             "fromName": "Kensal Green",
             "toId": "willesden-junction",
@@ -12105,7 +12142,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-329",
+            "id": "lnk-330",
             "fromId": "kensal-rise",
             "fromName": "Kensal Rise",
             "toId": "willesden-junction",
@@ -12134,7 +12171,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-330",
+            "id": "lnk-331",
             "fromId": "shepherd-s-bush",
             "fromName": "Shepherd's Bush",
             "toId": "kensington-olympia",
@@ -12163,7 +12200,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-331",
+            "id": "lnk-332",
             "fromId": "kensington-olympia",
             "fromName": "Kensington Olympia",
             "toId": "west-brompton",
@@ -12192,36 +12229,36 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-332",
+            "id": "lnk-333",
             "fromId": "king-s-cross-saint-pancras",
-            "fromName": "St Pancras International",
+            "fromName": "King's Cross St. Pancras",
             "toId": "kentish-town",
             "toName": "Kentish Town",
-            "start": [-0.12354, 51.53168],
+            "start": [-0.12319, 51.53066],
             "end": [-0.14055, 51.55041],
             "line": "NR",
             "lineColor": "#94A3B8",
             "fromLines": "NR",
             "toLines": "NR",
             "walkMinutes": 32,
-            "railMinutes": 11.4,
-            "timeSavedMinutes": -20.6,
+            "railMinutes": 11.7,
+            "timeSavedMinutes": -20.3,
             "railHops": 1,
             "transfers": 0,
             "steps": 3200,
             "kcal": 134,
-            "straightKm": 2.39,
-            "circuity": 1.07,
-            "pedDensity": 25.5446,
-            "carPeopleKm": 444.9,
-            "cycleKm": 142.96,
+            "straightKm": 2.5,
+            "circuity": 1.02,
+            "pedDensity": 45.1589,
+            "carPeopleKm": 561.5,
+            "cycleKm": 157.61,
             "isCrossLine": false,
             "isOfficialQuicker": false,
-            "walkabilityScore": 53,
+            "walkabilityScore": 63,
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-333",
+            "id": "lnk-334",
             "fromId": "kentish-town",
             "fromName": "Kentish Town",
             "toId": "tufnell-park",
@@ -12233,8 +12270,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 10,
-            "railMinutes": 9.0,
-            "timeSavedMinutes": -1.0,
+            "railMinutes": 8.8,
+            "timeSavedMinutes": -1.2,
             "railHops": 1,
             "transfers": 0,
             "steps": 1000,
@@ -12250,7 +12287,7 @@
             "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-334",
+            "id": "lnk-335",
             "fromId": "kentish-town",
             "fromName": "Kentish Town",
             "toId": "west-hampstead",
@@ -12279,7 +12316,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-335",
+            "id": "lnk-336",
             "fromId": "west-hampstead",
             "fromName": "West Hampstead",
             "toId": "kilburn",
@@ -12291,8 +12328,8 @@
             "fromLines": "Jubilee",
             "toLines": "Jubilee",
             "walkMinutes": 15,
-            "railMinutes": 9.4,
-            "timeSavedMinutes": -5.6,
+            "railMinutes": 9.2,
+            "timeSavedMinutes": -5.8,
             "railHops": 1,
             "transfers": 0,
             "steps": 1500,
@@ -12308,7 +12345,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-336",
+            "id": "lnk-337",
             "fromId": "kilburn",
             "fromName": "Kilburn",
             "toId": "willesden-green",
@@ -12337,7 +12374,36 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-337",
+            "id": "lnk-338",
+            "fromId": "queens-park",
+            "fromName": "Queens Park (London)",
+            "toId": "kilburn-high-road",
+            "toName": "Kilburn High Road",
+            "start": [-0.20499, 51.53397],
+            "end": [-0.19224, 51.53728],
+            "line": "LO",
+            "lineColor": "#EE7C0E",
+            "fromLines": "LO",
+            "toLines": "LO",
+            "walkMinutes": 13,
+            "railMinutes": 8.1,
+            "timeSavedMinutes": -4.9,
+            "railHops": 1,
+            "transfers": 0,
+            "steps": 1300,
+            "kcal": 55,
+            "straightKm": 0.96,
+            "circuity": 1.09,
+            "pedDensity": 32.0872,
+            "carPeopleKm": 450.3,
+            "cycleKm": 61.03,
+            "isCrossLine": false,
+            "isOfficialQuicker": false,
+            "walkabilityScore": 57,
+            "quadrant": "rail_wins"
+        },
+        {
+            "id": "lnk-339",
             "fromId": "kilburn-high-road",
             "fromName": "Kilburn High Road",
             "toId": "south-hampstead",
@@ -12366,7 +12432,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-338",
+            "id": "lnk-340",
             "fromId": "maida-vale",
             "fromName": "Maida Vale",
             "toId": "kilburn-park",
@@ -12395,7 +12461,7 @@
             "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-339",
+            "id": "lnk-341",
             "fromId": "kilburn-park",
             "fromName": "Kilburn Park",
             "toId": "queen-s-park",
@@ -12407,8 +12473,8 @@
             "fromLines": "Bakerloo",
             "toLines": "Bakerloo",
             "walkMinutes": 11,
-            "railMinutes": 9.0,
-            "timeSavedMinutes": -2.0,
+            "railMinutes": 8.9,
+            "timeSavedMinutes": -2.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 1100,
@@ -12424,7 +12490,7 @@
             "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-340",
+            "id": "lnk-342",
             "fromId": "london-city-airport",
             "fromName": "London City Airport",
             "toId": "king-george-v",
@@ -12436,8 +12502,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 13,
-            "railMinutes": 8.1,
-            "timeSavedMinutes": -4.9,
+            "railMinutes": 8.3,
+            "timeSavedMinutes": -4.7,
             "railHops": 1,
             "transfers": 0,
             "steps": 1300,
@@ -12453,36 +12519,36 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-341",
+            "id": "lnk-343",
             "fromId": "king-s-cross-saint-pancras",
-            "fromName": "St Pancras International",
+            "fromName": "King's Cross St. Pancras",
             "toId": "russell-square",
             "toName": "Russell Square",
-            "start": [-0.12354, 51.53168],
+            "start": [-0.12319, 51.53066],
             "end": [-0.12429, 51.52307],
             "line": "Piccadilly",
             "lineColor": "#3B82F6",
             "fromLines": "Piccadilly",
             "toLines": "Piccadilly",
             "walkMinutes": 14,
-            "railMinutes": 9.5,
-            "timeSavedMinutes": -4.5,
+            "railMinutes": 9.1,
+            "timeSavedMinutes": -4.9,
             "railHops": 1,
             "transfers": 0,
             "steps": 1400,
             "kcal": 59,
-            "straightKm": 0.96,
-            "circuity": 1.17,
-            "pedDensity": 92.3741,
-            "carPeopleKm": 697.9,
-            "cycleKm": 249.12,
+            "straightKm": 0.85,
+            "circuity": 1.32,
+            "pedDensity": 107.2302,
+            "carPeopleKm": 823.5,
+            "cycleKm": 301.89,
             "isCrossLine": false,
             "isOfficialQuicker": false,
-            "walkabilityScore": 75,
+            "walkabilityScore": 77,
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-342",
+            "id": "lnk-344",
             "fromId": "knightsbridge",
             "fromName": "Knightsbridge",
             "toId": "south-kensington",
@@ -12511,7 +12577,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-343",
+            "id": "lnk-345",
             "fromId": "ladbroke-grove",
             "fromName": "Ladbroke Grove",
             "toId": "latimer-road",
@@ -12540,7 +12606,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-344",
+            "id": "lnk-346",
             "fromId": "westbourne-park",
             "fromName": "Westbourne Park",
             "toId": "ladbroke-grove",
@@ -12569,7 +12635,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-345",
+            "id": "lnk-347",
             "fromId": "ladywell",
             "fromName": "Ladywell",
             "toId": "lewisham",
@@ -12598,7 +12664,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-347",
+            "id": "lnk-349",
             "fromId": "lambeth-north",
             "fromName": "Lambeth North",
             "toId": "southwark",
@@ -12610,8 +12676,8 @@
             "fromLines": "Bakerloo",
             "toLines": "Jubilee",
             "walkMinutes": 10,
-            "railMinutes": 15.0,
-            "timeSavedMinutes": 5.0,
+            "railMinutes": 14.7,
+            "timeSavedMinutes": 4.7,
             "railHops": 2,
             "transfers": 1,
             "steps": 1000,
@@ -12627,7 +12693,7 @@
             "quadrant": "nudge_gold"
         },
         {
-            "id": "lnk-348",
+            "id": "lnk-350",
             "fromId": "lambeth-north",
             "fromName": "Lambeth North",
             "toId": "waterloo",
@@ -12639,8 +12705,8 @@
             "fromLines": "Bakerloo",
             "toLines": "Bakerloo",
             "walkMinutes": 9,
-            "railMinutes": 8.7,
-            "timeSavedMinutes": -0.3,
+            "railMinutes": 8.6,
+            "timeSavedMinutes": -0.4,
             "railHops": 1,
             "transfers": 0,
             "steps": 900,
@@ -12656,7 +12722,7 @@
             "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-349",
+            "id": "lnk-351",
             "fromId": "lancaster-gate",
             "fromName": "Lancaster Gate",
             "toId": "marble-arch",
@@ -12685,7 +12751,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-350",
+            "id": "lnk-352",
             "fromId": "queensway",
             "fromName": "Queensway",
             "toId": "lancaster-gate",
@@ -12714,7 +12780,7 @@
             "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-351",
+            "id": "lnk-353",
             "fromId": "latimer-road",
             "fromName": "Latimer Road",
             "toId": "shepherd-s-bush",
@@ -12726,10 +12792,10 @@
             "fromLines": "Hammersmith&City, Circle",
             "toLines": "Central",
             "walkMinutes": 14,
-            "railMinutes": 33.2,
-            "timeSavedMinutes": 19.2,
-            "railHops": 8,
-            "transfers": 2,
+            "railMinutes": 31.2,
+            "timeSavedMinutes": 17.2,
+            "railHops": 10,
+            "transfers": 1,
             "steps": 1400,
             "kcal": 59,
             "straightKm": 0.96,
@@ -12743,7 +12809,7 @@
             "quadrant": "nudge_gold"
         },
         {
-            "id": "lnk-352",
+            "id": "lnk-354",
             "fromId": "latimer-road",
             "fromName": "Latimer Road",
             "toId": "wood-lane",
@@ -12772,7 +12838,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-353",
+            "id": "lnk-355",
             "fromId": "stratford",
             "fromName": "Stratford",
             "toId": "lea-bridge",
@@ -12801,7 +12867,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-354",
+            "id": "lnk-356",
             "fromId": "lea-bridge",
             "fromName": "Lea Bridge",
             "toId": "tottenham-hale",
@@ -12830,7 +12896,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-355",
+            "id": "lnk-357",
             "fromId": "leicester-square",
             "fromName": "Leicester Square",
             "toId": "piccadilly-circus",
@@ -12859,7 +12925,7 @@
             "quadrant": "nudge_gold"
         },
         {
-            "id": "lnk-356",
+            "id": "lnk-358",
             "fromId": "tottenham-court-road",
             "fromName": "Tottenham Court Road",
             "toId": "leicester-square",
@@ -12871,8 +12937,8 @@
             "fromLines": "Northern",
             "toLines": "Northern",
             "walkMinutes": 8,
-            "railMinutes": 8.5,
-            "timeSavedMinutes": 0.5,
+            "railMinutes": 8.4,
+            "timeSavedMinutes": 0.4,
             "railHops": 1,
             "transfers": 0,
             "steps": 800,
@@ -12888,7 +12954,7 @@
             "quadrant": "nudge_gold"
         },
         {
-            "id": "lnk-357",
+            "id": "lnk-359",
             "fromId": "lewisham",
             "fromName": "Lewisham",
             "toId": "nunhead",
@@ -12917,7 +12983,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-359",
+            "id": "lnk-361",
             "fromId": "leyton",
             "fromName": "Leyton",
             "toId": "leytonstone",
@@ -12946,7 +13012,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-360",
+            "id": "lnk-362",
             "fromId": "stratford",
             "fromName": "Stratford",
             "toId": "leyton",
@@ -12958,8 +13024,8 @@
             "fromLines": "Central",
             "toLines": "Central",
             "walkMinutes": 25,
-            "railMinutes": 11.2,
-            "timeSavedMinutes": -13.8,
+            "railMinutes": 10.9,
+            "timeSavedMinutes": -14.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 2500,
@@ -12975,7 +13041,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-361",
+            "id": "lnk-363",
             "fromId": "leyton-midland-road",
             "fromName": "Leyton Midland Road",
             "toId": "leytonstone-high-road",
@@ -13004,7 +13070,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-362",
+            "id": "lnk-364",
             "fromId": "leytonstone-high-road",
             "fromName": "Leytonstone High Road",
             "toId": "wanstead-park",
@@ -13033,7 +13099,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-363",
+            "id": "lnk-365",
             "fromId": "shadwell",
             "fromName": "Shadwell",
             "toId": "limehouse",
@@ -13045,8 +13111,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 15,
-            "railMinutes": 8.6,
-            "timeSavedMinutes": -6.4,
+            "railMinutes": 8.8,
+            "timeSavedMinutes": -6.2,
             "railHops": 1,
             "transfers": 0,
             "steps": 1500,
@@ -13062,7 +13128,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-364",
+            "id": "lnk-366",
             "fromId": "west-ham",
             "fromName": "West Ham",
             "toId": "limehouse",
@@ -13091,7 +13157,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-365",
+            "id": "lnk-367",
             "fromId": "limehouse",
             "fromName": "Limehouse",
             "toId": "westferry",
@@ -13103,8 +13169,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 15,
-            "railMinutes": 8.1,
-            "timeSavedMinutes": -6.9,
+            "railMinutes": 8.2,
+            "timeSavedMinutes": -6.8,
             "railHops": 1,
             "transfers": 0,
             "steps": 1500,
@@ -13120,7 +13186,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-366",
+            "id": "lnk-368",
             "fromId": "liverpool-street",
             "fromName": "Liverpool Street",
             "toId": "moorgate",
@@ -13132,8 +13198,8 @@
             "fromLines": "Metropolitan",
             "toLines": "Metropolitan",
             "walkMinutes": 6,
-            "railMinutes": 6.4,
-            "timeSavedMinutes": 0.4,
+            "railMinutes": 6.3,
+            "timeSavedMinutes": 0.3,
             "railHops": 1,
             "transfers": 0,
             "steps": 600,
@@ -13149,7 +13215,7 @@
             "quadrant": "nudge_gold"
         },
         {
-            "id": "lnk-367",
+            "id": "lnk-369",
             "fromId": "shoreditch-high-street",
             "fromName": "Shoreditch High Street",
             "toId": "liverpool-street",
@@ -13161,9 +13227,9 @@
             "fromLines": "London Overground",
             "toLines": "Central, Hammersmith&City, Metropolitan, Circle, National Rail",
             "walkMinutes": 12,
-            "railMinutes": 18.0,
-            "timeSavedMinutes": 6.0,
-            "railHops": 3,
+            "railMinutes": 16.8,
+            "timeSavedMinutes": 4.8,
+            "railHops": 2,
             "transfers": 1,
             "steps": 1200,
             "kcal": 50,
@@ -13178,7 +13244,7 @@
             "quadrant": "nudge_gold"
         },
         {
-            "id": "lnk-370",
+            "id": "lnk-372",
             "fromId": "south-bermondsey",
             "fromName": "South Bermondsey",
             "toId": "london-bridge",
@@ -13207,7 +13273,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-371",
+            "id": "lnk-373",
             "fromId": "southwark",
             "fromName": "Southwark",
             "toId": "london-bridge",
@@ -13219,8 +13285,8 @@
             "fromLines": "Jubilee",
             "toLines": "Jubilee",
             "walkMinutes": 19,
-            "railMinutes": 10.3,
-            "timeSavedMinutes": -8.7,
+            "railMinutes": 10.1,
+            "timeSavedMinutes": -8.9,
             "railHops": 1,
             "transfers": 0,
             "steps": 1900,
@@ -13236,7 +13302,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-372",
+            "id": "lnk-374",
             "fromId": "london-bridge",
             "fromName": "London Bridge",
             "toId": "waterloo-east",
@@ -13265,7 +13331,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-373",
+            "id": "lnk-375",
             "fromId": "pontoon-dock",
             "fromName": "Pontoon Dock",
             "toId": "london-city-airport",
@@ -13277,8 +13343,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 16,
-            "railMinutes": 8.6,
-            "timeSavedMinutes": -7.4,
+            "railMinutes": 8.7,
+            "timeSavedMinutes": -7.3,
             "railHops": 1,
             "transfers": 0,
             "steps": 1600,
@@ -13294,7 +13360,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-374",
+            "id": "lnk-376",
             "fromId": "warwick-avenue",
             "fromName": "Warwick Avenue",
             "toId": "maida-vale",
@@ -13323,7 +13389,7 @@
             "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-375",
+            "id": "lnk-377",
             "fromId": "manor-house",
             "fromName": "Manor House",
             "toId": "turnpike-lane",
@@ -13352,7 +13418,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-376",
+            "id": "lnk-378",
             "fromId": "stratford",
             "fromName": "Stratford",
             "toId": "maryland",
@@ -13364,8 +13430,8 @@
             "fromLines": "TfL Rail",
             "toLines": "TfL Rail",
             "walkMinutes": 14,
-            "railMinutes": 7.3,
-            "timeSavedMinutes": -6.7,
+            "railMinutes": 7.1,
+            "timeSavedMinutes": -6.9,
             "railHops": 1,
             "transfers": 0,
             "steps": 1400,
@@ -13381,7 +13447,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-377",
+            "id": "lnk-379",
             "fromId": "westcombe-park",
             "fromName": "Westcombe Park",
             "toId": "maze-hill",
@@ -13410,7 +13476,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-378",
+            "id": "lnk-380",
             "fromId": "stepney-green",
             "fromName": "Stepney Green",
             "toId": "mile-end",
@@ -13439,7 +13505,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-379",
+            "id": "lnk-381",
             "fromId": "stratford",
             "fromName": "Stratford",
             "toId": "mile-end",
@@ -13451,8 +13517,8 @@
             "fromLines": "Central",
             "toLines": "Central",
             "walkMinutes": 43,
-            "railMinutes": 13.8,
-            "timeSavedMinutes": -29.2,
+            "railMinutes": 13.4,
+            "timeSavedMinutes": -29.6,
             "railHops": 1,
             "transfers": 0,
             "steps": 4300,
@@ -13468,7 +13534,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-380",
+            "id": "lnk-382",
             "fromId": "streatham",
             "fromName": "Streatham",
             "toId": "mitcham-eastfields",
@@ -13497,7 +13563,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-381",
+            "id": "lnk-383",
             "fromId": "monument",
             "fromName": "Monument",
             "toId": "tower-hill",
@@ -13526,7 +13592,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-382",
+            "id": "lnk-384",
             "fromId": "moorgate",
             "fromName": "Moorgate",
             "toId": "old-street",
@@ -13555,7 +13621,7 @@
             "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-383",
+            "id": "lnk-385",
             "fromId": "north-sheen",
             "fromName": "North Sheen",
             "toId": "mortlake",
@@ -13584,7 +13650,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-385",
+            "id": "lnk-387",
             "fromId": "surrey-quays",
             "fromName": "Surrey Quays",
             "toId": "new-cross",
@@ -13613,7 +13679,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-386",
+            "id": "lnk-388",
             "fromId": "surrey-quays",
             "fromName": "Surrey Quays",
             "toId": "new-cross-gate",
@@ -13642,7 +13708,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-387",
+            "id": "lnk-389",
             "fromId": "norbury",
             "fromName": "Norbury",
             "toId": "streatham-common",
@@ -13671,7 +13737,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-388",
+            "id": "lnk-390",
             "fromId": "west-acton",
             "fromName": "West Acton",
             "toId": "north-acton",
@@ -13700,7 +13766,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-389",
+            "id": "lnk-391",
             "fromId": "tulse-hill",
             "fromName": "Tulse Hill",
             "toId": "north-dulwich",
@@ -13729,7 +13795,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-390",
+            "id": "lnk-392",
             "fromId": "north-ealing",
             "fromName": "North Ealing",
             "toId": "park-royal",
@@ -13758,7 +13824,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-391",
+            "id": "lnk-393",
             "fromId": "south-ealing",
             "fromName": "South Ealing",
             "toId": "northfields",
@@ -13787,7 +13853,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-392",
+            "id": "lnk-394",
             "fromId": "tottenham-hale",
             "fromName": "Tottenham Hale",
             "toId": "northumberland-park",
@@ -13816,7 +13882,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-393",
+            "id": "lnk-395",
             "fromId": "notting-hill-gate",
             "fromName": "Notting Hill Gate",
             "toId": "queensway",
@@ -13845,7 +13911,7 @@
             "quadrant": "nudge_gold"
         },
         {
-            "id": "lnk-394",
+            "id": "lnk-396",
             "fromId": "nunhead",
             "fromName": "Nunhead",
             "toId": "peckham-rye",
@@ -13874,7 +13940,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-395",
+            "id": "lnk-397",
             "fromId": "shoreditch-high-street",
             "fromName": "Shoreditch High Street",
             "toId": "old-street",
@@ -13886,10 +13952,10 @@
             "fromLines": "London Overground",
             "toLines": "Northern, National Rail",
             "walkMinutes": 12,
-            "railMinutes": 29.7,
-            "timeSavedMinutes": 17.7,
-            "railHops": 7,
-            "transfers": 1,
+            "railMinutes": 26.1,
+            "timeSavedMinutes": 14.1,
+            "railHops": 5,
+            "transfers": 2,
             "steps": 1200,
             "kcal": 50,
             "straightKm": 0.94,
@@ -13903,7 +13969,7 @@
             "quadrant": "nudge_gold"
         },
         {
-            "id": "lnk-396",
+            "id": "lnk-398",
             "fromId": "oval",
             "fromName": "Oval",
             "toId": "stockwell",
@@ -13932,7 +13998,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-397",
+            "id": "lnk-399",
             "fromId": "piccadilly-circus",
             "fromName": "Piccadilly Circus",
             "toId": "oxford-circus",
@@ -13961,7 +14027,7 @@
             "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-398",
+            "id": "lnk-400",
             "fromId": "oxford-circus",
             "fromName": "Oxford Circus",
             "toId": "tottenham-court-road",
@@ -13973,8 +14039,8 @@
             "fromLines": "Central",
             "toLines": "Central",
             "walkMinutes": 9,
-            "railMinutes": 9.1,
-            "timeSavedMinutes": 0.1,
+            "railMinutes": 8.9,
+            "timeSavedMinutes": -0.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 900,
@@ -13987,10 +14053,10 @@
             "isCrossLine": false,
             "isOfficialQuicker": false,
             "walkabilityScore": 96,
-            "quadrant": "nudge_gold"
+            "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-399",
+            "id": "lnk-401",
             "fromId": "warren-street",
             "fromName": "Warren Street",
             "toId": "oxford-circus",
@@ -14019,7 +14085,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-400",
+            "id": "lnk-402",
             "fromId": "paddington",
             "fromName": "Paddington",
             "toId": "royal-oak",
@@ -14048,7 +14114,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-401",
+            "id": "lnk-403",
             "fromId": "paddington",
             "fromName": "Paddington",
             "toId": "warwick-avenue",
@@ -14060,8 +14126,8 @@
             "fromLines": "Bakerloo",
             "toLines": "Bakerloo",
             "walkMinutes": 16,
-            "railMinutes": 9.3,
-            "timeSavedMinutes": -6.7,
+            "railMinutes": 9.1,
+            "timeSavedMinutes": -6.9,
             "railHops": 1,
             "transfers": 0,
             "steps": 1600,
@@ -14077,7 +14143,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-402",
+            "id": "lnk-404",
             "fromId": "parsons-green",
             "fromName": "Parsons Green",
             "toId": "putney-bridge",
@@ -14106,7 +14172,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-403",
+            "id": "lnk-405",
             "fromId": "peckham-rye",
             "fromName": "Peckham Rye",
             "toId": "queens-road-peckham",
@@ -14135,7 +14201,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-404",
+            "id": "lnk-406",
             "fromId": "pimlico",
             "fromName": "Pimlico",
             "toId": "vauxhall",
@@ -14147,8 +14213,8 @@
             "fromLines": "Victoria",
             "toLines": "Victoria",
             "walkMinutes": 18,
-            "railMinutes": 9.2,
-            "timeSavedMinutes": -8.8,
+            "railMinutes": 9.0,
+            "timeSavedMinutes": -9.0,
             "railHops": 1,
             "transfers": 0,
             "steps": 1800,
@@ -14164,7 +14230,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-405",
+            "id": "lnk-407",
             "fromId": "victoria",
             "fromName": "Victoria",
             "toId": "pimlico",
@@ -14176,8 +14242,8 @@
             "fromLines": "Victoria",
             "toLines": "Victoria",
             "walkMinutes": 12,
-            "railMinutes": 9.6,
-            "timeSavedMinutes": -2.4,
+            "railMinutes": 9.5,
+            "timeSavedMinutes": -2.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 1200,
@@ -14193,7 +14259,7 @@
             "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-406",
+            "id": "lnk-408",
             "fromId": "plaistow",
             "fromName": "Plaistow",
             "toId": "upton-park",
@@ -14222,7 +14288,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-407",
+            "id": "lnk-409",
             "fromId": "west-ham",
             "fromName": "West Ham",
             "toId": "plaistow",
@@ -14234,8 +14300,8 @@
             "fromLines": "District / H&C",
             "toLines": "District / H&C",
             "walkMinutes": 17,
-            "railMinutes": 7.6,
-            "timeSavedMinutes": -9.4,
+            "railMinutes": 7.5,
+            "timeSavedMinutes": -9.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 1700,
@@ -14251,7 +14317,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-408",
+            "id": "lnk-410",
             "fromId": "west-silvertown",
             "fromName": "West Silvertown",
             "toId": "pontoon-dock",
@@ -14280,7 +14346,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-409",
+            "id": "lnk-411",
             "fromId": "poplar",
             "fromName": "Poplar",
             "toId": "west-india-quay",
@@ -14309,7 +14375,7 @@
             "quadrant": "policy_priority"
         },
         {
-            "id": "lnk-410",
+            "id": "lnk-412",
             "fromId": "westferry",
             "fromName": "Westferry",
             "toId": "poplar",
@@ -14338,7 +14404,7 @@
             "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-411",
+            "id": "lnk-413",
             "fromId": "prince-regent",
             "fromName": "Prince Regent",
             "toId": "royal-albert",
@@ -14367,7 +14433,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-412",
+            "id": "lnk-414",
             "fromId": "stratford",
             "fromName": "Stratford",
             "toId": "pudding-mill-lane",
@@ -14379,8 +14445,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 24,
-            "railMinutes": 8.4,
-            "timeSavedMinutes": -15.6,
+            "railMinutes": 8.5,
+            "timeSavedMinutes": -15.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 2400,
@@ -14396,7 +14462,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-413",
+            "id": "lnk-415",
             "fromId": "putney",
             "fromName": "Putney",
             "toId": "wandsworth-town",
@@ -14425,7 +14491,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-414",
+            "id": "lnk-416",
             "fromId": "queens-road-peckham",
             "fromName": "Queens Road Peckham",
             "toId": "south-bermondsey",
@@ -14454,7 +14520,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-415",
+            "id": "lnk-417",
             "fromId": "queens-road-peckham",
             "fromName": "Queens Road Peckham",
             "toId": "surrey-quays",
@@ -14483,7 +14549,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-416",
+            "id": "lnk-418",
             "fromId": "queenstown-road-battersea",
             "fromName": "Queenstown Road (Battersea)",
             "toId": "vauxhall",
@@ -14512,7 +14578,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-417",
+            "id": "lnk-419",
             "fromId": "queensway",
             "fromName": "Queensway",
             "toId": "royal-oak",
@@ -14524,10 +14590,10 @@
             "fromLines": "Central",
             "toLines": "Hammersmith&City, Circle",
             "walkMinutes": 12,
-            "railMinutes": 21.2,
-            "timeSavedMinutes": 9.2,
-            "railHops": 2,
-            "transfers": 2,
+            "railMinutes": 19.4,
+            "timeSavedMinutes": 7.4,
+            "railHops": 4,
+            "transfers": 1,
             "steps": 1200,
             "kcal": 50,
             "straightKm": 0.98,
@@ -14541,7 +14607,7 @@
             "quadrant": "nudge_gold"
         },
         {
-            "id": "lnk-418",
+            "id": "lnk-420",
             "fromId": "ravenscourt-park",
             "fromName": "Ravenscourt Park",
             "toId": "stamford-brook",
@@ -14570,7 +14636,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-419",
+            "id": "lnk-421",
             "fromId": "rectory-road",
             "fromName": "Rectory Road",
             "toId": "stoke-newington",
@@ -14599,7 +14665,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-420",
+            "id": "lnk-422",
             "fromId": "regent-s-park",
             "fromName": "Regent's Park",
             "toId": "warren-street",
@@ -14628,7 +14694,7 @@
             "quadrant": "nudge_gold"
         },
         {
-            "id": "lnk-421",
+            "id": "lnk-423",
             "fromId": "rotherhithe",
             "fromName": "Rotherhithe",
             "toId": "wapping",
@@ -14657,7 +14723,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-422",
+            "id": "lnk-424",
             "fromId": "royal-oak",
             "fromName": "Royal Oak",
             "toId": "warwick-avenue",
@@ -14669,8 +14735,8 @@
             "fromLines": "Hammersmith&City, Circle",
             "toLines": "Bakerloo",
             "walkMinutes": 10,
-            "railMinutes": 15.5,
-            "timeSavedMinutes": 5.5,
+            "railMinutes": 15.3,
+            "timeSavedMinutes": 5.3,
             "railHops": 2,
             "transfers": 1,
             "steps": 1000,
@@ -14686,7 +14752,7 @@
             "quadrant": "policy_priority"
         },
         {
-            "id": "lnk-423",
+            "id": "lnk-425",
             "fromId": "royal-oak",
             "fromName": "Royal Oak",
             "toId": "westbourne-park",
@@ -14715,7 +14781,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-424",
+            "id": "lnk-426",
             "fromId": "victoria",
             "fromName": "Victoria",
             "toId": "saint-james-s-park",
@@ -14727,8 +14793,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 11,
-            "railMinutes": 7.4,
-            "timeSavedMinutes": -3.6,
+            "railMinutes": 7.2,
+            "timeSavedMinutes": -3.8,
             "railHops": 1,
             "transfers": 0,
             "steps": 1100,
@@ -14744,7 +14810,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-425",
+            "id": "lnk-427",
             "fromId": "saint-james-s-park",
             "fromName": "St. James's Park",
             "toId": "westminster",
@@ -14756,8 +14822,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 11,
-            "railMinutes": 6.8,
-            "timeSavedMinutes": -4.2,
+            "railMinutes": 6.7,
+            "timeSavedMinutes": -4.3,
             "railHops": 1,
             "transfers": 0,
             "steps": 1100,
@@ -14773,7 +14839,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-426",
+            "id": "lnk-428",
             "fromId": "saint-james-street",
             "fromName": "St James Street (London)",
             "toId": "walthamstow-central",
@@ -14802,7 +14868,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-427",
+            "id": "lnk-429",
             "fromId": "south-hampstead",
             "fromName": "South Hampstead",
             "toId": "saint-john-s-wood",
@@ -14831,7 +14897,7 @@
             "quadrant": "policy_priority"
         },
         {
-            "id": "lnk-428",
+            "id": "lnk-430",
             "fromId": "saint-john-s-wood",
             "fromName": "St. John's Wood",
             "toId": "swiss-cottage",
@@ -14860,7 +14926,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-429",
+            "id": "lnk-431",
             "fromId": "stamford-hill",
             "fromName": "Stamford Hill",
             "toId": "seven-sisters",
@@ -14889,7 +14955,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-430",
+            "id": "lnk-432",
             "fromId": "seven-sisters",
             "fromName": "Seven Sisters",
             "toId": "tottenham-hale",
@@ -14901,8 +14967,8 @@
             "fromLines": "Victoria",
             "toLines": "Victoria",
             "walkMinutes": 19,
-            "railMinutes": 9.8,
-            "timeSavedMinutes": -9.2,
+            "railMinutes": 9.6,
+            "timeSavedMinutes": -9.4,
             "railHops": 1,
             "transfers": 0,
             "steps": 1900,
@@ -14918,7 +14984,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-431",
+            "id": "lnk-433",
             "fromId": "shadwell",
             "fromName": "Shadwell",
             "toId": "tower-gateway",
@@ -14930,8 +14996,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 18,
-            "railMinutes": 8.8,
-            "timeSavedMinutes": -9.2,
+            "railMinutes": 9.0,
+            "timeSavedMinutes": -9.0,
             "railHops": 1,
             "transfers": 0,
             "steps": 1800,
@@ -14947,7 +15013,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-432",
+            "id": "lnk-434",
             "fromId": "wapping",
             "fromName": "Wapping",
             "toId": "shadwell",
@@ -14976,7 +15042,7 @@
             "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-433",
+            "id": "lnk-435",
             "fromId": "shadwell",
             "fromName": "Shadwell",
             "toId": "whitechapel",
@@ -15005,7 +15071,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-434",
+            "id": "lnk-436",
             "fromId": "shepherd-s-bush",
             "fromName": "Shepherd's Bush",
             "toId": "white-city",
@@ -15017,8 +15083,8 @@
             "fromLines": "Central",
             "toLines": "Central",
             "walkMinutes": 15,
-            "railMinutes": 9.3,
-            "timeSavedMinutes": -5.7,
+            "railMinutes": 9.1,
+            "timeSavedMinutes": -5.9,
             "railHops": 1,
             "transfers": 0,
             "steps": 1500,
@@ -15034,7 +15100,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-435",
+            "id": "lnk-437",
             "fromId": "willesden-junction",
             "fromName": "Willesden Junction",
             "toId": "shepherd-s-bush",
@@ -15063,7 +15129,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-436",
+            "id": "lnk-438",
             "fromId": "shepherd-s-bush",
             "fromName": "Shepherd's Bush",
             "toId": "wood-lane",
@@ -15075,10 +15141,10 @@
             "fromLines": "Central",
             "toLines": "Hammersmith&City, Circle",
             "walkMinutes": 10,
-            "railMinutes": 35.0,
-            "timeSavedMinutes": 25.0,
-            "railHops": 9,
-            "transfers": 2,
+            "railMinutes": 33.0,
+            "timeSavedMinutes": 23.0,
+            "railHops": 11,
+            "transfers": 1,
             "steps": 1000,
             "kcal": 42,
             "straightKm": 0.66,
@@ -15092,7 +15158,7 @@
             "quadrant": "nudge_gold"
         },
         {
-            "id": "lnk-437",
+            "id": "lnk-439",
             "fromId": "wood-lane",
             "fromName": "Wood Lane",
             "toId": "shepherd-s-bush-market",
@@ -15121,7 +15187,7 @@
             "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-438",
+            "id": "lnk-440",
             "fromId": "whitechapel",
             "fromName": "Whitechapel",
             "toId": "shoreditch-high-street",
@@ -15150,7 +15216,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-439",
+            "id": "lnk-441",
             "fromId": "south-kensington",
             "fromName": "South Kensington",
             "toId": "sloane-square",
@@ -15179,7 +15245,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-440",
+            "id": "lnk-442",
             "fromId": "sloane-square",
             "fromName": "Sloane Square",
             "toId": "victoria",
@@ -15191,8 +15257,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 13,
-            "railMinutes": 7.7,
-            "timeSavedMinutes": -5.3,
+            "railMinutes": 7.5,
+            "timeSavedMinutes": -5.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 1300,
@@ -15208,7 +15274,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-441",
+            "id": "lnk-443",
             "fromId": "wimbledon-park",
             "fromName": "Wimbledon Park",
             "toId": "southfields",
@@ -15237,7 +15303,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-442",
+            "id": "lnk-444",
             "fromId": "waterloo",
             "fromName": "Waterloo",
             "toId": "southwark",
@@ -15249,8 +15315,8 @@
             "fromLines": "Jubilee",
             "toLines": "Jubilee",
             "walkMinutes": 8,
-            "railMinutes": 8.6,
-            "timeSavedMinutes": 0.6,
+            "railMinutes": 8.5,
+            "timeSavedMinutes": 0.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 800,
@@ -15266,7 +15332,7 @@
             "quadrant": "nudge_gold"
         },
         {
-            "id": "lnk-443",
+            "id": "lnk-445",
             "fromId": "stamford-brook",
             "fromName": "Stamford Brook",
             "toId": "turnham-green",
@@ -15295,7 +15361,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-444",
+            "id": "lnk-446",
             "fromId": "stoke-newington",
             "fromName": "Stoke Newington",
             "toId": "stamford-hill",
@@ -15324,7 +15390,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-445",
+            "id": "lnk-447",
             "fromId": "star-lane",
             "fromName": "Star Lane",
             "toId": "west-ham",
@@ -15336,8 +15402,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 11,
-            "railMinutes": 7.8,
-            "timeSavedMinutes": -3.2,
+            "railMinutes": 7.9,
+            "timeSavedMinutes": -3.1,
             "railHops": 1,
             "transfers": 0,
             "steps": 1100,
@@ -15353,7 +15419,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-446",
+            "id": "lnk-448",
             "fromId": "whitechapel",
             "fromName": "Whitechapel",
             "toId": "stepney-green",
@@ -15365,8 +15431,8 @@
             "fromLines": "Hammersmith & City",
             "toLines": "Hammersmith & City",
             "walkMinutes": 16,
-            "railMinutes": 7.7,
-            "timeSavedMinutes": -8.3,
+            "railMinutes": 7.5,
+            "timeSavedMinutes": -8.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 1600,
@@ -15382,7 +15448,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-447",
+            "id": "lnk-449",
             "fromId": "vauxhall",
             "fromName": "Vauxhall",
             "toId": "stockwell",
@@ -15394,8 +15460,8 @@
             "fromLines": "Victoria",
             "toLines": "Victoria",
             "walkMinutes": 21,
-            "railMinutes": 10.8,
-            "timeSavedMinutes": -10.2,
+            "railMinutes": 10.5,
+            "timeSavedMinutes": -10.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 2100,
@@ -15411,7 +15477,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-448",
+            "id": "lnk-450",
             "fromId": "stratford-high-street",
             "fromName": "Stratford High Street",
             "toId": "stratford",
@@ -15440,7 +15506,7 @@
             "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-449",
+            "id": "lnk-451",
             "fromId": "stratford",
             "fromName": "Stratford",
             "toId": "stratford-international",
@@ -15452,8 +15518,8 @@
             "fromLines": "DLR",
             "toLines": "DLR",
             "walkMinutes": 11,
-            "railMinutes": 7.4,
-            "timeSavedMinutes": -3.6,
+            "railMinutes": 7.5,
+            "timeSavedMinutes": -3.5,
             "railHops": 1,
             "transfers": 0,
             "steps": 1100,
@@ -15469,7 +15535,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-450",
+            "id": "lnk-452",
             "fromId": "west-ham",
             "fromName": "West Ham",
             "toId": "stratford",
@@ -15483,7 +15549,7 @@
             "walkMinutes": 24,
             "railMinutes": 10.6,
             "timeSavedMinutes": -13.4,
-            "railHops": 3,
+            "railHops": 1,
             "transfers": 0,
             "steps": 2400,
             "kcal": 101,
@@ -15498,7 +15564,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-451",
+            "id": "lnk-453",
             "fromId": "streatham-common",
             "fromName": "Streatham Common",
             "toId": "streatham",
@@ -15527,7 +15593,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-452",
+            "id": "lnk-454",
             "fromId": "streatham",
             "fromName": "Streatham",
             "toId": "tooting",
@@ -15556,7 +15622,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-453",
+            "id": "lnk-455",
             "fromId": "west-norwood",
             "fromName": "West Norwood",
             "toId": "streatham-hill",
@@ -15585,7 +15651,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-454",
+            "id": "lnk-456",
             "fromId": "sydenham-hill",
             "fromName": "Sydenham Hill",
             "toId": "west-dulwich",
@@ -15614,7 +15680,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-455",
+            "id": "lnk-457",
             "fromId": "tooting-bec",
             "fromName": "Tooting Bec",
             "toId": "tooting-broadway",
@@ -15643,7 +15709,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-456",
+            "id": "lnk-458",
             "fromId": "west-norwood",
             "fromName": "West Norwood",
             "toId": "tulse-hill",
@@ -15672,7 +15738,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-457",
+            "id": "lnk-459",
             "fromId": "turnpike-lane",
             "fromName": "Turnpike Lane",
             "toId": "wood-green",
@@ -15701,7 +15767,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-458",
+            "id": "lnk-460",
             "fromId": "vauxhall",
             "fromName": "Vauxhall",
             "toId": "waterloo",
@@ -15730,7 +15796,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-459",
+            "id": "lnk-461",
             "fromId": "wanstead-park",
             "fromName": "Wanstead Park",
             "toId": "woodgrange-park",
@@ -15759,7 +15825,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-460",
+            "id": "lnk-462",
             "fromId": "westminster",
             "fromName": "Westminster",
             "toId": "waterloo",
@@ -15771,8 +15837,8 @@
             "fromLines": "Jubilee",
             "toLines": "Jubilee",
             "walkMinutes": 17,
-            "railMinutes": 9.4,
-            "timeSavedMinutes": -7.6,
+            "railMinutes": 9.3,
+            "timeSavedMinutes": -7.7,
             "railHops": 1,
             "transfers": 0,
             "steps": 1700,
@@ -15788,7 +15854,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-461",
+            "id": "lnk-463",
             "fromId": "westferry",
             "fromName": "Westferry",
             "toId": "west-india-quay",
@@ -15817,7 +15883,7 @@
             "quadrant": "parity_nudge"
         },
         {
-            "id": "lnk-462",
+            "id": "lnk-464",
             "fromId": "wimbledon",
             "fromName": "Wimbledon",
             "toId": "wimbledon-chase",
@@ -15846,7 +15912,7 @@
             "quadrant": "rail_wins"
         },
         {
-            "id": "lnk-463",
+            "id": "lnk-465",
             "fromId": "wimbledon",
             "fromName": "Wimbledon",
             "toId": "wimbledon-park",
@@ -15858,8 +15924,8 @@
             "fromLines": "District",
             "toLines": "District",
             "walkMinutes": 28,
-            "railMinutes": 9.0,
-            "timeSavedMinutes": -19.0,
+            "railMinutes": 8.8,
+            "timeSavedMinutes": -19.2,
             "railHops": 1,
             "transfers": 0,
             "steps": 2800,

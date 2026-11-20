@@ -122,7 +122,7 @@ export const NARRATIVE_ACTS: Record<NarrativeAct, ActMetadata> = {
         act: 1,
         tag: 'ACT 01 · TOPOLOGICAL HABIT',
         title: 'The Subterranean Reflex',
-        thesis: '454 Zone 1–3 rail links modeled via NetworkX. Harry Beck’s diagram straightens lines and expands central hubs, conditioning Londoners to descend escalators even for 600m hops.',
+        thesis: 'Each line connects two nearby London stations (456 total). Harry Beck’s Tube diagram tricks commuters into going underground even for 600m hops.',
         preset: {
             act: 1,
             hub: 'overview',
@@ -135,8 +135,8 @@ export const NARRATIVE_ACTS: Record<NarrativeAct, ActMetadata> = {
     2: {
         act: 2,
         tag: 'ACT 02 · GEOMETRIC ILLUSION',
-        title: '84 Journeys Faster on Foot',
-        thesis: '18.5% of modeled corridors beat door-to-door rail outright (ΔT > 0), saving a median 5.0 min and up to +32.8 min where radial Tube lines force multi-interchange doglegs.',
+        title: '83 Journeys Faster on Foot',
+        thesis: 'Gold & red arcs connect station pairs where street walking beats taking the train door-to-door—saving a median 4.8 min (up to +32.7 min on cross-line doglegs).',
         preset: {
             act: 2,
             hub: 'overview',
@@ -149,8 +149,8 @@ export const NARRATIVE_ACTS: Record<NarrativeAct, ActMetadata> = {
     3: {
         act: 3,
         tag: 'ACT 03 · STREET REALM EQUITY',
-        title: 'Healthy Streets vs. Hostile Shortcuts',
-        thesis: 'Joining OSGB36 mobility hexagons separates 71 pleasant active-travel wins from 13 traffic-choked shortcuts—pinpointing where TfL Healthy Streets upgrades unlock latent walking.',
+        title: 'Healthy Streets vs. Busy Traffic',
+        thesis: 'Comparing street hexagons separates 70 pleasant walks (gold) from 13 traffic-heavy shortcuts (red)—showing exactly where TfL should improve pavements & crossings.',
         preset: {
             act: 3,
             hub: 'oxford-circus',
@@ -164,7 +164,7 @@ export const NARRATIVE_ACTS: Record<NarrativeAct, ActMetadata> = {
         act: 4,
         tag: 'ACT 04 · LOCAL ISOCHRONE',
         title: 'South Kensington & Campus Walkshed',
-        thesis: 'Around Imperial College & Albertopolis, 60 parity corridors across London sit within ≤3 min of rail—offering zero-cost peak platform crowding relief and active daily steps.',
+        thesis: 'Around Imperial College, teal arcs mark 58 "almost-tied" walks (within ≤3 min of the Tube) that relieve peak crowding and add healthy daily steps.',
         preset: {
             act: 4,
             hub: 'south-kensington',

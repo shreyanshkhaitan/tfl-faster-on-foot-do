@@ -19,11 +19,11 @@ type ControlSearch = {
 };
 
 const CORRIDOR_FILTERS: Array<{ value: CorridorFilter; label: string; dotClass: string }> = [
-    { value: 'faster', label: 'Faster Walk (ΔT > 0)', dotClass: 'bg-amber-400' },
-    { value: 'nudge_gold', label: 'Signpost Ready', dotClass: 'bg-amber-300' },
-    { value: 'policy_priority', label: 'Traffic Bottlenecks', dotClass: 'bg-rose-500' },
-    { value: 'parity', label: '≤3m Parity Swaps', dotClass: 'bg-teal-400' },
-    { value: 'all', label: 'All 454 Links', dotClass: 'bg-slate-400' }
+    { value: 'faster', label: 'Walk Beats Tube (83)', dotClass: 'bg-amber-400' },
+    { value: 'nudge_gold', label: 'Great Streets (70)', dotClass: 'bg-amber-300' },
+    { value: 'policy_priority', label: 'Busy Traffic (13)', dotClass: 'bg-rose-500' },
+    { value: 'parity', label: '≤3m Tie (58)', dotClass: 'bg-teal-400' },
+    { value: 'all', label: 'All 456 Links', dotClass: 'bg-slate-400' }
 ];
 
 const HEX_MODES: Array<{ value: HexLayerMode; label: string }> = [

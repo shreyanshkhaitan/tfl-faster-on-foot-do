@@ -39,6 +39,7 @@ const CORRIDORS_GLOW_LAYER_ID = 'do-corridors-glow';
 const CORRIDORS_LAYER_ID = 'do-corridors-line';
 const STATIONS_SOURCE_ID = 'do-stations-source';
 const STATIONS_LAYER_ID = 'do-stations-circle';
+const STATIONS_LABEL_LAYER_ID = 'do-stations-label';
 
 type DeckSegment = {
     id: string;
@@ -47,6 +48,7 @@ type DeckSegment = {
     width: number;
     color: [number, number, number, number];
     t: number;
+    link: WalkingLink;
 };
 
 type GeoJsonSourceHandle = {
@@ -248,7 +250,7 @@ function ScreenPage() {
             getWidth: (d) => d.width,
             widthUnits: 'pixels',
             getColor: (d) => d.color,
-            pickable: false
+            pickable: true
         });
 
         const stationLayer = new ScatterplotLayer<WalkingStation>({
@@ -327,6 +329,7 @@ function ScreenPage() {
             features: visibleStations.map((st) => ({
                 type: 'Feature' as const,
                 properties: {
+                    label: st.fasterWalkCount > 0 ? st.name : '',
                     radius: st.fasterWalkCount > 0 ? 5.5 + Math.min(4.5, st.fasterWalkCount) : 3.8,
                     fill: st.fasterWalkCount > 0 ? '#f59e0b' : '#0f172a',
                     stroke: st.fasterWalkCount > 0 ? '#fef3c7' : '#94a3b8'
@@ -450,6 +453,25 @@ function ScreenPage() {
                         'circle-stroke-width': 2
                     }
                 });
+                mapInstance.addLayer({
+                    id: STATIONS_LABEL_LAYER_ID,
+                    type: 'symbol',
+                    source: STATIONS_SOURCE_ID,
+                    minzoom: 12.2,
+                    layout: {
+                        'text-field': ['get', 'label'],
+                        'text-font': ['Montserrat SemiBold', 'Open Sans Bold', 'Noto Sans Regular'],
+                        'text-size': 13,
+                        'text-offset': [0, 1.15],
+                        'text-anchor': 'top',
+                        'text-optional': true
+                    },
+                    paint: {
+                        'text-color': '#f8fafc',
+                        'text-halo-color': '#090b0f',
+                        'text-halo-width': 2
+                    }
+                });
             } else {
                 existingStations.setData(stationsGeoJson);
             }
@@ -512,14 +534,34 @@ function ScreenPage() {
                         onViewStateChange={handleDeckViewStateChange}
                         layers={deckLayers}
                         getTooltip={({ object }) => {
-                            const st = object as WalkingStation | undefined;
-                            if (!st || typeof st.name !== 'string') return null;
+                            if (!object || typeof object !== 'object') return null;
+                            if ('link' in object) {
+                                const lnk = (object as DeckSegment).link;
+                                const verdict =
+                                    lnk.timeSavedMinutes > 0
+                                        ? `Walking is +${lnk.timeSavedMinutes} min FASTER than rail`
+                                        : lnk.timeSavedMinutes >= -3
+                                          ? `Almost tied (Train is only ${Math.abs(lnk.timeSavedMinutes)} min faster)`
+                                          : `Train is ${Math.abs(lnk.timeSavedMinutes)} min faster`;
+                                return {
+                                    text: `${lnk.fromName} ↔ ${lnk.toName} (${lnk.line})\nWalk: ${lnk.walkMinutes} min (${lnk.steps} steps)  |  Train: ${lnk.railMinutes} min (${lnk.transfers} changes)\n${verdict} · Street Comfort: ${lnk.walkabilityScore}/100`,
+                                    style: {
+                                        backgroundColor: '#090b0f',
+                                        color: '#f8fafc',
+                                        border: '1px solid rgba(245, 158, 11, 0.55)',
+                                        borderRadius: '8px',
+                                        fontFamily: 'JetBrains Mono, monospace',
+                                        fontSize: '12px',
+                                        lineHeight: '1.45',
+                                        whiteSpace: 'pre-line',
+                                        padding: '8px 12px'
+                                    }
+                                };
+                            }
+                            const st = object as WalkingStation;
+                            if (typeof st.name !== 'string') return null;
                             return {
-                                text: `${st.name} · ${st.fasterWalkCount} faster-on-foot links (best ΔT: ${
-                                    st.bestSavedMinutes > 0
-                                        ? `+${st.bestSavedMinutes}m`
-                                        : `${st.bestSavedMinutes}m`
-                                })`,
+                                text: `Station: ${st.name}\n${st.fasterWalkCount} faster-on-foot links connected here`,
                                 style: {
                                     backgroundColor: '#090b0f',
                                     color: '#f8fafc',
@@ -527,6 +569,7 @@ function ScreenPage() {
                                     borderRadius: '8px',
                                     fontFamily: 'JetBrains Mono, monospace',
                                     fontSize: '12px',
+                                    whiteSpace: 'pre-line',
                                     padding: '6px 10px'
                                 }
                             };
@@ -647,31 +690,31 @@ function ScreenPage() {
                     style={{ width: '86%' }}
                 >
                     <p className="font-mono-tabular mb-[1.4vh] text-[clamp(0.8rem,1.85vh,1.5rem)] font-semibold tracking-[0.15em] text-slate-400 uppercase">
-                        POLICY QUADRANT ENCODING (ΔT = T_RAIL − T_WALK)
+                        HOW TO READ EACH STATION-TO-STATION ARC
                     </p>
                     <div className="grid grid-cols-2 gap-x-[2vh] gap-y-[1.2vh] text-[clamp(0.85rem,2.05vh,1.65rem)]">
                         <div className="flex items-center gap-[1.1vh]">
                             <span className="h-[0.9vh] w-[3.2vh] rounded-full bg-amber-400" />
                             <span className="font-medium text-slate-100">
-                                Faster &amp; Pleasant (71)
+                                Walk Beats Tube · Great Street (70)
                             </span>
                         </div>
                         <div className="flex items-center gap-[1.1vh]">
                             <span className="h-[0.9vh] w-[3.2vh] rounded-full bg-rose-500" />
                             <span className="font-medium text-slate-100">
-                                Faster · High Traffic (13)
+                                Walk Beats Tube · Busy Cars (13)
                             </span>
                         </div>
                         <div className="flex items-center gap-[1.1vh]">
                             <span className="h-[0.9vh] w-[3.2vh] rounded-full bg-teal-400" />
                             <span className="font-medium text-slate-300">
-                                ≤3m Parity Window (60)
+                                Almost Tied · ≤3m of Tube (58)
                             </span>
                         </div>
                         <div className="flex items-center gap-[1.1vh]">
                             <span className="h-[0.9vh] w-[3.2vh] rounded-full bg-slate-500" />
                             <span className="font-medium text-slate-400">
-                                Subterranean Rail Wins
+                                Tube Wins (&gt;3m Faster)
                             </span>
                         </div>
                     </div>
@@ -853,7 +896,8 @@ function buildDeckSegments(links: WalkingLink[], spotlightId: string | null): De
                 target: points[i + 1],
                 width,
                 color: quadrantRgba(link.quadrant, t, isSpotlight),
-                t
+                t,
+                link
             });
         }
     }

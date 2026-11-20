@@ -125,7 +125,7 @@ function HomePage() {
                             </span>
                         </div>
                         <p className="text-xs text-[var(--muted-foreground)]">
-                            454 Zone 1–3 rail corridors &amp; 1,500 OSGB36 street mobility hexagons
+                            456 Zone 1–3 rail corridors &amp; 1,500 OSGB36 street mobility hexagons
                             synchronized across distributed wall nodes.
                         </p>
                     </div>

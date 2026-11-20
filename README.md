@@ -36,12 +36,12 @@ All quantitative modeling is reproducible via [`analysis/build_walking_model.py`
 
 - **Real-World Data Cleaning**: Automated entity resolution against TfL's NaPTAN station registry caught and corrected **6 clerical typos** inside TfL's published spreadsheets (including Row 282 of the Zones 1–3 sheet, which blended _Chalk Farm_ and _Belsize Park_ into `"Belsize Farm"`, alongside `"Caldedonian Road"`, `"Mornington Cresecent"`, `"Kiburn Park"`, `"Canonsbury"`, `"Tuffnell Park"`, and uncached Excel formula cells such as `'=60+52'`).
 - **State-Expanded Transit Graph ($G = (V, E)$ in `networkx`)**: Models platform states `(station, line)` and street portals `(station, STREET)` with empirical vertical escalator/shaft access + headway wait penalties (`3.4 min` per end deep Tube; `2.5 min` sub-surface/Elizabeth; `2.7 min` Overground/DLR/NR), track run times + `0.45 min` dwell, and **4.5–5.5 min line interchange penalties** (including co-located OSI complexes $\le 230\text{m}$).
-- **OLS Street Circuity Calibration**: Regressing street walk minutes on Haversine distance across $N = 454$ corridors yields $T_{\text{walk}} = 14.6\,d_{\text{crow}(\text{km})} + 0.89$ ($R^2 = 0.724$), corresponding to a mean Central London street detour factor of **$\bar{\tau} = 1.24\times$**.
+- **OLS Street Circuity Calibration**: Regressing street walk minutes on Haversine distance across $N = 456$ corridors yields $T_{\text{walk}} = 14.57\,d_{\text{crow}(\text{km})} + 0.92$ ($R^2 = 0.724$), corresponding to a mean Central London street detour factor of **$\bar{\tau} = 1.24\times$**.
 - **Spatial Hexagonal Comfort Join & Four-Quadrant Policy Split**:
-    - **84 corridors (18.5%)** beat rail outright ($\Delta T > 0$), saving a median **5.0 min** (up to **+32.8 min** on radial-orbital doglegs like _Kentish Town West ↔ Chalk Farm_ or _New Cross ↔ Deptford Bridge_).
-    - **71 "Signpost Ready" Corridors (`nudge_gold`)**: Faster on foot _and_ routed through high-pedestrian, lower-traffic hexagons—actionable immediately via station exit signage.
+    - **83 corridors (18.2%)** beat rail outright ($\Delta T > 0$), saving a median **4.8 min** (up to **+32.7 min** on radial-orbital doglegs like _Kentish Town West ↔ Chalk Farm_ or _New Cross ↔ Deptford Bridge_).
+    - **70 "Signpost Ready" Corridors (`nudge_gold`)**: Faster on foot _and_ routed through high-pedestrian, lower-traffic hexagons—actionable immediately via station exit signage.
     - **13 "Healthy Streets Priority" Corridors (`policy_priority`)**: Faster on foot geometrically, _yet_ exposed to heavy AM-peak vehicle people-km—pinpointing where wider pavements and crossings unlock latent active travel.
-    - **60 "Parity Window" Corridors (`parity_nudge`)**: Within $\le 3\text{ min}$ of rail, offering zero-cost peak platform crowding relief.
+    - **58 "Parity Window" Corridors (`parity_nudge`)**: Within $\le 3\text{ min}$ of rail, offering zero-cost peak platform crowding relief.
 
 ---
 

@@ -208,6 +208,23 @@ def build_station_registry(
                 }
             registry[key]["lines"].add(line_id)
 
+        for seq in payload.get("stopPointSequences", []):
+            for sp in seq.get("stopPoint", []):
+                if sp.get("lat") is None or sp.get("lon") is None:
+                    continue
+                key = normalize_station_name(sp["name"])
+                lat, lon = float(sp["lat"]), float(sp["lon"])
+                if key not in registry:
+                    registry[key] = {
+                        "id": key.replace(" ", "-"),
+                        "key": key,
+                        "name": clean_display_name(sp["name"]),
+                        "lat": lat,
+                        "lon": lon,
+                        "lines": set(),
+                    }
+                registry[key]["lines"].add(line_id)
+
     for raw_query, info in nr_lookup.items():
         if not info:
             continue
@@ -269,14 +286,41 @@ def build_transit_graph(
             portal_penalty = 2.7
         g.add_edge(portal, plat, weight=portal_penalty, kind="portal")
 
-    # 1. Add ordered TfL route sequences
+    # 1. Add ordered TfL route sequences (indexing both HUB station IDs and mode-level NaPTAN IDs
+    # from stopPointSequences so central Elizabeth line, Overground & Tube HUB interchanges connect)
     for line_id, payload in line_sequences.items():
         id_to_key: dict[str, str] = {}
         for st in payload.get("stations", []):
             id_to_key[st["id"]] = normalize_station_name(st["name"])
+        for seq in payload.get("stopPointSequences", []):
+            for sp in seq.get("stopPoint", []):
+                id_to_key[sp["id"]] = normalize_station_name(sp["name"])
+                if sp.get("icsId"):
+                    id_to_key[sp["icsId"]] = normalize_station_name(sp["name"])
 
         speed_kmh = 31.0 if line_id in DEEP_TUBE_LINES | SUBSURFACE_LINES else 27.0
         dwell_min = 0.45
+
+        # Connect stopPointSequences directly (guaranteed exact stop-by-stop branch order)
+        for seq in payload.get("stopPointSequences", []):
+            pts = seq.get("stopPoint", [])
+            for sp_a, sp_b in zip(pts, pts[1:]):
+                ka = id_to_key.get(sp_a["id"])
+                kb = id_to_key.get(sp_b["id"])
+                if not ka or not kb or ka == kb or ka not in registry or kb not in registry:
+                    continue
+                attach_platform(ka, line_id)
+                attach_platform(kb, line_id)
+                dist_km = haversine_km(
+                    registry[ka]["lat"],
+                    registry[ka]["lon"],
+                    registry[kb]["lat"],
+                    registry[kb]["lon"],
+                )
+                run_min = (dist_km * 1.12 / speed_kmh) * 60.0 + dwell_min
+                u, v = (ka, line_id), (kb, line_id)
+                if not g.has_edge(u, v) or run_min < g[u][v]["weight"]:
+                    g.add_edge(u, v, weight=run_min, kind="track", line=line_id)
 
         for route in payload.get("orderedLineRoutes", []):
             naptans = route.get("naptanIds", [])
